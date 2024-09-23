@@ -19,13 +19,26 @@ body{
 nav {
   width: 150px;
   height: 100%;
-  background-color: #ffffff;
+  bottom: 0;
+  background-color: #fff;
   position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;
   transition: width 0.2s linear;
   box-shadow: 0 20px 35px rgba(0,0,0,0) ;
+}
+a{
+  position: relative;
+  color: rgba(85,83,83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+.fas{
+
 }
 
 nav ul {
@@ -118,7 +131,7 @@ ul li {
   cursor: pointer;
   position: relative;
 }
-ul li::before {
+/* ul li::before {
   content: "";
   position: absolute;
   height: 28px;
@@ -129,7 +142,7 @@ ul li::before {
   background-position: center;
   top: 12px;
   left: 8px;
-}
+} */
 ul li.checked {
   color: #555;
   text-decoration: line-through;
