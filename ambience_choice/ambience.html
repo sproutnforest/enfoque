@@ -9,11 +9,44 @@
             width: 24px;
             height: 24px;
         }
+        .slider {
+            /* removing default appearance */
+            -webkit-appearance: none;
+            appearance: none; 
+            /* creating a custom design */
+            width: 100%;
+            cursor: pointer;
+            outline: none;
+            /*  slider progress trick  */
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .slider::-webkit-slider-runnable-track {
+            height: 15px;
+            background: #ccc;
+            border-radius: 16px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            /* removing default appearance */
+            -webkit-appearance: none;
+            appearance: none; 
+            /* creating a custom design */
+            height: 15px;
+            width: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 2px solid #f50;
+        }
     </style>
 </head>
 <body>
     <button id="playButton"><img src="../imageIcon/play-solid.svg"></button>
     <audio id="myAudio" src="../sounds/fireplace.mp3"></audio>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
 
     <script>
         var isPlaying = false;
@@ -21,6 +54,7 @@
             if(!isPlaying){
                 var audio = document.getElementById("myAudio");
                 audio.play();
+                audio.loop = true;
                 isPlaying = true;
             }
             else{
@@ -29,6 +63,13 @@
                 isPlaying = false;
             }
         });
+        var slider = document.getElementById("myRange");
+        slider.oninput = function() {
+            if(isPlaying){
+                var audio = document.getElementById("myAudio");
+                audio.volume = this.value / 100;
+            }
+        }
     </script>
 </body>
 </html>
