@@ -5,78 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css" />
-    /* <!-- Font Awesome Cdn Link --> */
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    /*
+    <!-- Font Awesome Cdn Link -->
+    */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
-
- 
-      <!-- 
+    <!-- 
         - #SIDE BARz
       -->
 
-      <nav>
-        <ul>
-          <li>
-            <a href="#" class="logo">
-              <img src="./imageIcon/logoUntar.jpg" alt="">
-              <span class="nav-item"></span>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="logo">
+            <img src="./imageIcon/logoUntar.jpg" alt="" />
+            <span class="nav-item"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-clock"></i>
+            <span class="nav-item">Clock</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-images"></i>
+            <span class="nav-item">Background</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="todo-button">
+            <i class="fas fa-list-ul"></i>
+            <span class="nav-item">List</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-music"></i>
+            <span class="nav-item">Song</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-clock"></i>
-              <span class="nav-item">Clock</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-images"></i>
-              <span class="nav-item">Background</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" id="todo-button">
-              <i class="fas fa-list-ul"></i>
-              <span class="nav-item">List</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-music"></i>
-              <span class="nav-item">Song</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      
-
-
-      <!-- 
+    <!-- 
         - #TO DO LIST
       -->
     <section>
-    <div class="container-1">
-      <div class="todo">
-        <h2>
-          To-Do List
-          <img
-            class="sticky-note"
-            src="./imageIcon/icons8-todo-list-66.png"
-            alt="Todo Icon"
-          />
-        </h2>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Add your text" />
-          <button onclick="addTask()">Add Notes</button>
+      <div class="container-1">
+        <div class="todo">
+          <h2>
+            To-Do List
+            <img
+              class="sticky-note"
+              src="./imageIcon/icons8-todo-list-66.png"
+              alt="Todo Icon"
+            />
+          </h2>
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text" />
+            <button onclick="addTask()">Add Notes</button>
+          </div>
+          <ul id="list-container"></ul>
         </div>
-        <ul id="list-container"></ul>
       </div>
-    </div>
-  </section>
-
-
+    </section>
 
     <script src="script.js"></script>
   </body>
