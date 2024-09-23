@@ -16,8 +16,8 @@ body {
 - # SIDE BAR
 --> */
 nav {
-  width: 280px;
-  height: 45%;
+  width: 150px;
+  height: 55%;
   bottom: 0;
   background-color: #fff;
   position: absolute;
@@ -31,17 +31,17 @@ nav {
   text-align: center;
   display: flex;
   transition: all 1s ease;
-  margin: 10px 0 0 10px;
+  margin: 100px 0px 0px -18px; /* Adjust the margin-left value as needed */
 }
-
 .logo img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 0%;
 }
+
 .logo span {
   font-weight: bold;
-  padding-left: 20px;
+  padding-left: 10px;
   text-transform: uppercase;
 }
 
@@ -51,30 +51,30 @@ a {
   font-size: 14px;
   display: table;
   width: 300px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .fas {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 10px;
   top: 10px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
 .nav-item {
   position: relative;
   top: 10px;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 a:hover {
-  background: #A01626;
+  background: #a01626;
 }
 
 nav:hover {
-  width: 290px;
+  width: 350px;
   transition: all 0.5s ease;
 }
 
@@ -142,7 +142,7 @@ ul li {
 
   position: relative;
 }
-ul li::before {
+/* ul li::before {
   content: "";
   position: absolute;
   height: 28px;
@@ -153,7 +153,7 @@ ul li::before {
   background-position: center;
   top: 12px;
   left: 8px;
-}
+} */
 ul li.checked {
   color: #555;
   text-decoration: line-through;
