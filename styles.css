@@ -266,3 +266,57 @@ ul li span:hover {
 .firevolume, .rainvolume, .keyvolume, .typevolume, .writevolume{
   flex-grow: 3;
 }
+
+/* Background choser*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  transition: background 0.5s;
+}
+
+.background-chooser {
+  position: fixed;
+  top: 20px;
+  right: -300px;
+  width: 250px; 
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease; 
+  z-index: 1000; 
+}
+
+.background-chooser.active {
+  right: 20px; 
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; 
+}
+
+.choice {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover;
+}
+
+.choice:hover {
+  transform: scale(1.05);
+}
+
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  object-fit: cover; 
+  z-index: -1; 
+}

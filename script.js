@@ -6,6 +6,8 @@
 
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const backgroundChooser = document.getElementById("background-chooser");
+const choiceButton = document.getElementById("choice");
 
 function addTask() {
   if (inputBox.value === "") {
@@ -176,3 +178,20 @@ wslider.oninput = function() {
         audio.volume = this.value / 100;
     }
 }
+
+/* Background choser*/
+document.querySelectorAll('.choice').forEach((choice) => {
+    choice.addEventListener('click', (event) => {
+      const bgUrl = event.target.src;
+      document.body.style.backgroundImage = `url(${bgUrl})`;
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+      document.querySelector('.background-chooser').classList.remove('active');
+    });
+  });
+  
+  document.querySelector('.navbar-toggle').addEventListener('click', function(event) {
+    const bgChooser = document.querySelector('.background-chooser');
+    bgChooser.classList.toggle('active'); 
+  });
+  
