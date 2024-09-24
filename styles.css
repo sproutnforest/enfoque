@@ -88,6 +88,9 @@ nav:hover {
   background: linear-gradient(135deg, #e0e0e0, #ffffff);
   padding: 10px;
 }
+#todo-section{
+  display:none;
+}
 .todo {
   width: 100%;
   max-width: 540px;
@@ -95,7 +98,7 @@ nav:hover {
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
-  display: none;
+  /* display: none; */
   transition: all 0.3s ease;
 }
 .todo h2 {
@@ -189,9 +192,11 @@ ul li span:hover {
   max-width: 540px;
   height: 100%;
   max-height: 370px;
-  background: #fff;
+  background: transparent;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+  margin-top: 170px;
 }
 #firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
   width: 50px;

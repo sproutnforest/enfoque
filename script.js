@@ -45,7 +45,7 @@ showTasks();
 // show list button side bar -> to do list
 document.getElementById('todo-button').addEventListener('click', function(event) {
   event.preventDefault(); // Mencegah perilaku default link
-  const todo = document.querySelector('.todo');
+  const todo = document.querySelector('#todo-section');
   todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
 });
 
