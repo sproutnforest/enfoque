@@ -182,16 +182,38 @@ wslider.oninput = function() {
 /* Background choser*/
 document.querySelectorAll('.choice').forEach((choice) => {
     choice.addEventListener('click', (event) => {
-      const bgUrl = event.target.src;
-      document.body.style.backgroundImage = `url(${bgUrl})`;
-      document.body.style.backgroundSize = "cover";
-      document.body.style.backgroundPosition = "center";
-      document.querySelector('.background-chooser').classList.remove('active');
+        const bgUrl = event.target.src;
+        document.body.style.backgroundImage = `url(${bgUrl})`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.querySelector('.background-chooser').classList.remove('active');
     });
-  });
-  
-  document.querySelector('.navbar-toggle').addEventListener('click', function(event) {
+});
+
+document.querySelector('.navbar-toggle').addEventListener('click', function(event) {
     const bgChooser = document.querySelector('.background-chooser');
     bgChooser.classList.toggle('active'); 
-  });
-  
+});
+
+const backgroundChoser = document.querySelector('.background-chooser'); // pastikan ini sesuai
+
+backgroundChoser.style.position = 'absolute'; // tambahkan ini jika belum ada
+let offsetX, offsetY;
+
+backgroundChoser.addEventListener('mousedown', (event) => {
+    offsetX = event.clientX - backgroundChoser.getBoundingClientRect().left;
+    offsetY = event.clientY - backgroundChoser.getBoundingClientRect().top;
+
+    const mouseMoveHandler = (event) => {
+        backgroundChoser.style.left = `${event.clientX - offsetX}px`;
+        backgroundChoser.style.top = `${event.clientY - offsetY}px`;
+    };
+
+    const mouseUpHandler = () => {
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+    };
+
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mouseup', mouseUpHandler);
+});
