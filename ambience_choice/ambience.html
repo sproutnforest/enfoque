@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Audio on Button Click</title>
     <style>
+        #firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
         #firebutton img, #rainbutton img, #typebutton img, #keybutton img, #writebutton img {
-            width: 24px;
-            height: 24px;
+            width: 70%;
+            height: 70%;
         }
         #ambicon {
-            width: 24px;
-            height: 24px;
+            width: 10%;
+            height: 10%;
         }
         .fireslider, .rainslider, .keyslider, .typeslider, .writeslider {
             -webkit-appearance: none;
@@ -19,24 +26,42 @@
             width: 100%;
             cursor: pointer;
             outline: none;
-            overflow: hidden;
+            overflow: visible;
             border-radius: 16px;
         }
-
         .fireslider::-webkit-slider-runnable-track, .rainslider::-webkit-slider-runnable-track, .keyslider::-webkit-slider-runnable-track, .typeslider::-webkit-slider-runnable-track, .writeslider::-webkit-slider-runnable-track {
             height: 15px;
             background: #ccc;
             border-radius: 16px;
         }
-
         .fireslider::-webkit-slider-thumb, .rainslider::-webkit-slider-thumb, .keyslider::-webkit-slider-thumb, .typeslider::-webkit-slider-thumb, .writeslider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none; 
-            height: 15px;
-            width: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            border: 2px solid #f50;
+            height: 50px;
+            width: 50px;
+            background: url('../imageIcon/volume-low-solid.svg') no-repeat center center;
+            background-size: 80%;
+            border: none;
+            cursor: pointer;
+            margin-top: -18px;
+        }
+        .Ambiance{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 500px;
+            background-color: #DADAD9;
+            padding: 25px;
+            border-radius: 7%;
+        }
+        .fire, .key, .rain, .type, .write{
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .firevolume, .rainvolume, .keyvolume, .typevolume, .writevolume{
+            flex-grow: 3;
         }
     </style>
 </head>
@@ -58,7 +83,7 @@
                 <input type="range" min="1" max="100" value="100" class="rainslider" id="rainslider">
             </div>
         </div>
-        <div class="type"></div>
+        <div class="type">
             <img src="../imageIcon/typewriter_7207564.png" id="ambicon">
             <button id="typebutton"><img src="../imageIcon/play-solid.svg" id="typeplay"></button>
             <audio id="typeaudio" src="../sounds/typerwriter.mp3"></audio>
@@ -66,7 +91,7 @@
                 <input type="range" min="1" max="100" value="100" class="typeslider" id="typeslider">
             </div>
         </div>
-        <div class="key"></div>
+        <div class="key">
             <img src="../imageIcon/keyboard-solid.svg" id="ambicon">
             <button id="keybutton"><img src="../imageIcon/play-solid.svg" id="keyplay"></button>
             <audio id="keyaudio" src="../sounds/keyboard.mp3"></audio>
@@ -74,7 +99,7 @@
                 <input type="range" min="1" max="100" value="100" class="keyslider" id="keyslider">
             </div>
         </div>
-        <div class="write"></div>
+        <div class="write">
             <img src="../imageIcon/pencil-solid.svg" id="ambicon">
             <button id="writebutton"><img src="../imageIcon/play-solid.svg" id="writeplay"></button>
             <audio id="writeaudio" src="../sounds/writing.mp3"></audio>
