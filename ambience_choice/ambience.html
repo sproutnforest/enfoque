@@ -15,10 +15,12 @@
         #firebutton img, #rainbutton img, #typebutton img, #keybutton img, #writebutton img {
             width: 70%;
             height: 70%;
+            filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
         }
         #ambicon {
             width: 10%;
             height: 10%;
+            filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
         }
         .fireslider, .rainslider, .keyslider, .typeslider, .writeslider {
             -webkit-appearance: none;
@@ -31,7 +33,7 @@
         }
         .fireslider::-webkit-slider-runnable-track, .rainslider::-webkit-slider-runnable-track, .keyslider::-webkit-slider-runnable-track, .typeslider::-webkit-slider-runnable-track, .writeslider::-webkit-slider-runnable-track {
             height: 15px;
-            background: #ccc;
+            background: #DADAD9;
             border-radius: 16px;
         }
         .fireslider::-webkit-slider-thumb, .rainslider::-webkit-slider-thumb, .keyslider::-webkit-slider-thumb, .typeslider::-webkit-slider-thumb, .writeslider::-webkit-slider-thumb {
@@ -40,6 +42,7 @@
             height: 50px;
             width: 50px;
             background: url('../imageIcon/volume-low-solid.svg') no-repeat center center;
+            filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
             background-size: 80%;
             border: none;
             cursor: pointer;
@@ -50,7 +53,6 @@
             flex-direction: column;
             gap: 15px;
             width: 500px;
-            background-color: #DADAD9;
             padding: 25px;
             border-radius: 7%;
         }

@@ -45,7 +45,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="music-button">
             <i class="fas fa-music"></i>
             <span class="nav-item">Song</span>
           </a>
@@ -75,6 +75,53 @@
         </div>
       </div>
     </section>
+    
+    <!--Ambiance-->
+    <section id="ambiance-section">
+      <div class="Ambiance">
+        <div class="fire">
+            <img src="imageIcon/fire-solid.svg" id="ambicon">
+            <button id="firebutton"><img src="imageIcon/play-solid.svg" id="fireplay"></button>
+            <audio id="fireaudio" src="sounds/fireplace.mp3"></audio>
+            <div class="firevolume">
+                <input type="range" min="1" max="100" value="100" class="fireslider" id="fireslider">
+            </div>
+        </div>
+        <div class="rain">
+            <img src="imageIcon/cloud-rain-solid.svg" id="ambicon">
+            <button id="rainbutton"><img src="imageIcon/play-solid.svg" id="rainplay"></button>
+            <audio id="rainaudio" src="sounds/rain.mp3"></audio>
+            <div class="rainvolume">
+                <input type="range" min="1" max="100" value="100" class="rainslider" id="rainslider">
+            </div>
+        </div>
+        <div class="type">
+            <img src="imageIcon/typewriter_7207564.png" id="ambicon">
+            <button id="typebutton"><img src="imageIcon/play-solid.svg" id="typeplay"></button>
+            <audio id="typeaudio" src="sounds/typerwriter.mp3"></audio>
+            <div class="typevolume">
+                <input type="range" min="1" max="100" value="100" class="typeslider" id="typeslider">
+            </div>
+        </div>
+        <div class="key">
+            <img src="imageIcon/keyboard-solid.svg" id="ambicon">
+            <button id="keybutton"><img src="imageIcon/play-solid.svg" id="keyplay"></button>
+            <audio id="keyaudio" src="sounds/keyboard.mp3"></audio>
+            <div class="keyvolume">
+                <input type="range" min="1" max="100" value="100" class="keyslider" id="keyslider">
+            </div>
+        </div>
+        <div class="write">
+            <img src="imageIcon/pencil-solid.svg" id="ambicon">
+            <button id="writebutton"><img src="imageIcon/play-solid.svg" id="writeplay"></button>
+            <audio id="writeaudio" src="sounds/writing.mp3"></audio>
+            <div class="writevolume">
+                <input type="range" min="1" max="100" value="100" class="writeslider" id="writeslider">
+            </div>
+        </div>
+    </div>
+    </section>
+
 
     <script src="script.js"></script>
   </body>

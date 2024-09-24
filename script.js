@@ -49,6 +49,130 @@ document.getElementById('todo-button').addEventListener('click', function(event)
   todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
 });
 
-/* <!-- 
-- #
---> */
+//ambience
+document.getElementById('music-button').addEventListener('click', function(event) {
+  event.preventDefault(); // Mencegah perilaku default link
+  const todo = document.querySelector('#ambiance-section');
+  todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
+});
+
+//fire
+var firePlaying = false;
+document.getElementById("firebutton").addEventListener("click", function() {
+    if(!firePlaying){
+        var audio = document.getElementById("fireaudio");
+        audio.play();
+        audio.loop = true;
+        firePlaying = true;
+        document.getElementById("fireplay").src = "../imageIcon/pause-solid.svg";
+    }
+    else{
+        var audio = document.getElementById("fireaudio");
+        audio.pause();
+        firePlaying = false;
+        document.getElementById("fireplay").src = "../imageIcon/play-solid.svg";
+    }
+});
+var fslider = document.getElementById("fireslider");
+fslider.oninput = function() {
+    if(firePlaying){
+        var audio = document.getElementById("fireaudio");
+        audio.volume = this.value / 100;
+    }
+}
+//keyboard
+var keyPlaying = false;
+document.getElementById("keybutton").addEventListener("click", function() {
+    if(!keyPlaying){
+        var audio = document.getElementById("keyaudio");
+        audio.play();
+        audio.loop = true;
+        keyPlaying = true;
+        document.getElementById("keyplay").src = "../imageIcon/pause-solid.svg";
+    }
+    else{
+        var audio = document.getElementById("keyaudio");
+        audio.pause();
+        keyPlaying = false;
+        document.getElementById("keyplay").src = "../imageIcon/play-solid.svg";
+    }
+});
+var kslider = document.getElementById("keyslider");
+kslider.oninput = function() {
+    if(keyPlaying){
+        var audio = document.getElementById("keyaudio");
+        audio.volume = this.value / 100;
+    }
+}
+//rain
+var rainPlaying = false;
+document.getElementById("rainbutton").addEventListener("click", function() {
+    if(!rainPlaying){
+        var audio = document.getElementById("rainaudio");
+        audio.play();
+        audio.loop = true;
+        rainPlaying = true;
+        document.getElementById("rainplay").src = "imageIcon/pause-solid.svg";
+    }
+    else{
+        var audio = document.getElementById("rainaudio");
+        audio.pause();
+        rainPlaying = false;
+        document.getElementById("rainplay").src = "imageIcon/play-solid.svg";
+    }
+});
+var rslider = document.getElementById("rainslider");
+rslider.oninput = function() {
+    if(rainPlaying){
+        var audio = document.getElementById("rainaudio");
+        audio.volume = this.value / 100;
+    }
+}
+//typewriter
+var typePlaying = false;
+document.getElementById("typebutton").addEventListener("click", function() {
+    if(!typePlaying){
+        var audio = document.getElementById("typeaudio");
+        audio.play();
+        audio.loop = true;
+        typePlaying = true;
+        document.getElementById("typeplay").src = "imageIcon/pause-solid.svg";
+    }
+    else{
+        var audio = document.getElementById("typeaudio");
+        audio.pause();
+        typePlaying = false;
+        document.getElementById("typeplay").src = "imageIcon/play-solid.svg";
+    }
+});
+var tslider = document.getElementById("typeslider");
+tslider.oninput = function() {
+    if(typePlaying){
+        var audio = document.getElementById("typeaudio");
+        audio.volume = this.value / 100;
+    }
+}
+//writing
+var writePlaying = false;
+document.getElementById("writebutton").addEventListener("click", function() {
+    if(!writePlaying){
+        var audio = document.getElementById("writeaudio");
+        audio.play();
+        audio.loop = true;
+        writePlaying = true;
+        document.getElementById("writeplay").src = "imageIcon/pause-solid.svg";
+    }
+    else{
+        var audio = document.getElementById("writeaudio");
+        audio.pause();
+        writePlaying = false;
+        document.getElementById("writeplay").src = "imageIcon/play-solid.svg";
+    }
+});
+var wslider = document.getElementById("writeslider");
+wslider.oninput = function() {
+    if(writePlaying){
+        var audio = document.getElementById("writeaudio");
+        audio.volume = this.value / 100;
+    }
+}
