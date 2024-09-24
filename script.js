@@ -63,6 +63,7 @@ var firePlaying = false;
 document.getElementById("firebutton").addEventListener("click", function() {
     if(!firePlaying){
         var audio = document.getElementById("fireaudio");
+        audio.volume = fslider.value / 100;
         audio.play();
         audio.loop = true;
         firePlaying = true;
@@ -87,6 +88,7 @@ var keyPlaying = false;
 document.getElementById("keybutton").addEventListener("click", function() {
     if(!keyPlaying){
         var audio = document.getElementById("keyaudio");
+        audio.volume = kslider.value / 100;
         audio.play();
         audio.loop = true;
         keyPlaying = true;
@@ -111,6 +113,7 @@ var rainPlaying = false;
 document.getElementById("rainbutton").addEventListener("click", function() {
     if(!rainPlaying){
         var audio = document.getElementById("rainaudio");
+        audio.volume = rslider.value / 100;
         audio.play();
         audio.loop = true;
         rainPlaying = true;
@@ -135,6 +138,7 @@ var typePlaying = false;
 document.getElementById("typebutton").addEventListener("click", function() {
     if(!typePlaying){
         var audio = document.getElementById("typeaudio");
+        audio.volume = tslider.value / 100;
         audio.play();
         audio.loop = true;
         typePlaying = true;
@@ -159,6 +163,7 @@ var writePlaying = false;
 document.getElementById("writebutton").addEventListener("click", function() {
     if(!writePlaying){
         var audio = document.getElementById("writeaudio");
+        audio.volume = wslider.value / 100;
         audio.play();
         audio.loop = true;
         writePlaying = true;
