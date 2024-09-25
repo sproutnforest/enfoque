@@ -196,8 +196,9 @@ document.querySelectorAll('.choice').forEach((choice) => {
 });
 
 document.querySelector('.navbar-toggle').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah perilaku default link
     const bgChooser = document.querySelector('.background-chooser');
-    bgChooser.classList.toggle('active'); 
+    bgChooser.style.display = bgChooser.style.display === 'none' || bgChooser.style.display === '' ? 'block' : 'none';
 });
 
 const backgroundChoser = document.querySelector('.background-chooser'); // pastikan ini sesuai
