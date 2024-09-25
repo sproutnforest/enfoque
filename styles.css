@@ -12,6 +12,29 @@ body {
   background: #fff;
 }
 
+.uphead{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 250px;
+  background-color: #DADAD9;
+}
+.enlogo{
+  font-size: 30px;
+}
+.rightnav{
+  padding-right: 50px;
+}
+#rightnavbutton{
+  border: none;
+  outline: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: transparent;
+  font-size: 30px;
+}
 /* <!-- 
 - # SIDE BAR
 --> */
@@ -25,7 +48,7 @@ nav {
   top: 0;
   overflow: hidden;
   transition: width 0.2s linear;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 35px #0000001a;
 }
 .logo {
   text-align: center;
@@ -85,7 +108,6 @@ nav:hover {
 .container-1 {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #e0e0e0, #ffffff);
   padding: 10px;
 }
 #todo-section{
@@ -128,14 +150,13 @@ input {
   background: transparent;
   padding: 10px;
 }
-button {
+#todobutton {
   border: none;
   outline: none;
   padding: 10px 50px;
   background: #868686;
   color: #fff;
   font-size: 16px;
-
   border-radius: 40px;
 }
 ul li {
@@ -195,7 +216,7 @@ ul li span:hover {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  margin-left: 200px;
+  margin-left: 250px;
   margin-top: 170px;
 }
 #firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
