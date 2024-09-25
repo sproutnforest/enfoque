@@ -40,8 +40,14 @@ body::-webkit-scrollbar{
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 15px;
-  padding: 0px 15px;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 13px 15px;
+}
+#rightnavbutton:hover{
+  background-color: #DADAD9;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 /* <!-- 
 - # SIDE BAR
