@@ -220,26 +220,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const backgroundChoser = document.querySelector('.background-chooser'); 
-
-backgroundChoser.style.position = 'absolute';
-let offsetX, offsetY;
-
-backgroundChoser.addEventListener('mousedown', (event) => {
-    offsetX = event.clientX - backgroundChoser.getBoundingClientRect().left;
-    offsetY = event.clientY - backgroundChoser.getBoundingClientRect().top;
-
-    const mouseMoveHandler = (event) => {
-        backgroundChoser.style.left = `${event.clientX - offsetX}px`;
-        backgroundChoser.style.top = `${event.clientY - offsetY}px`;
-    };
-
-    const mouseUpHandler = () => {
-        document.removeEventListener('mousemove', mouseMoveHandler);
-        document.removeEventListener('mouseup', mouseUpHandler);
-    };
-
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
-});
-
