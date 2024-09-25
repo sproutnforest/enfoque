@@ -41,22 +41,20 @@ body::-webkit-scrollbar{
   font-size: 15px;
   padding: 0px 15px;
 }
-/* <!-- 
-- # SIDE BAR
---> */
-
+/* Sidebar Style */
 nav {
-  width: 8%;
-  height: 450px;
+  width: 100px; /* Wider default width */
+  height: 350px;
   background-color: #fff;
   position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;
-  transition: width 0.2s linear;
+  transition: width 0.3s ease-in-out;
   box-shadow: 0 20px 35px #0000001a;
   margin-top: 170px;
   margin-left: 30px;
+  border-radius: 15px; 
 }
 
 .logo {
@@ -66,10 +64,10 @@ nav {
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   padding-right: 10px;
-  border-radius: 0%;
+  border-radius: 50%; /* Rounded logo image */
 }
 
 .logo span {
@@ -78,37 +76,40 @@ nav {
   text-transform: uppercase;
 }
 
+
 a {
   position: relative;
   color: rgba(87, 87, 87);
-  font-size: 5px;
-  display: table;
-  width: 300px;
-  padding: 5px;
-}
-
-.fas {
-  position: relative;
-  width: -10px;
-  height: 5px;
-  top: 10px;
-  font-size: 15px;
-}
-
-.nav-item {
-  position: relative;
-  top: 10px;
-  margin-left: 0px;
+  font-size: 14px; /* Increased font size */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border-radius: 10px; /* Rounded link backgrounds */
+  margin-bottom: 10px;
 }
 
 a:hover {
   background: #dadad9;
 }
 
-nav:hover {
-  width: 10px;
-  transition: all 200s ease;
+
+.fas {
+  margin-right: 10px;
+  font-size: 18px;
 }
+
+
+.nav-item {
+  margin-left: 20px;
+}
+
+nav:hover {
+  width: 100px;
+  transition: none;
+}
+
 
 /* <!-- 
 - #TO DO LIST
@@ -124,7 +125,7 @@ nav:hover {
 }
 .todo {
   width: 60%;
-  max-width: 1500px;
+  max-width: 600px;
   background: #fff;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
