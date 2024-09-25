@@ -201,7 +201,7 @@ document.querySelector('.navbar-toggle').addEventListener('click', function(even
     bgChooser.style.display = bgChooser.style.display === 'none' || bgChooser.style.display === '' ? 'block' : 'none';
 });
 
-// Tampilkan salah satu background
+// menampilkan salah satu background
 document.addEventListener('DOMContentLoaded', () => {
     const bgChooser = document.querySelector('.background-chooser');
     
