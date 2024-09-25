@@ -201,9 +201,28 @@ document.querySelector('.navbar-toggle').addEventListener('click', function(even
     bgChooser.style.display = bgChooser.style.display === 'none' || bgChooser.style.display === '' ? 'block' : 'none';
 });
 
-const backgroundChoser = document.querySelector('.background-chooser'); // pastikan ini sesuai
+// Tampilkan salah satu background
+document.addEventListener('DOMContentLoaded', () => {
+    const bgChooser = document.querySelector('.background-chooser');
+    
+    const setBackground = (imageUrl) => {
+        document.body.style.backgroundImage = `url(${imageUrl})`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+    };
+    setBackground('../background/library.jpg'); 
+    document.querySelectorAll('.choice').forEach(choice => {
+        choice.addEventListener('click', (event) => {
+            const imageUrl = event.target.src;
+            setBackground(imageUrl); 
+            bgChooser.classList.remove('active'); 
+        });
+    });
+});
 
-backgroundChoser.style.position = 'absolute'; // tambahkan ini jika belum ada
+const backgroundChoser = document.querySelector('.background-chooser'); 
+
+backgroundChoser.style.position = 'absolute';
 let offsetX, offsetY;
 
 backgroundChoser.addEventListener('mousedown', (event) => {
@@ -223,3 +242,4 @@ backgroundChoser.addEventListener('mousedown', (event) => {
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 });
+
