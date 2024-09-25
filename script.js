@@ -49,13 +49,29 @@ document.getElementById('todo-button').addEventListener('click', function(event)
   event.preventDefault(); // Mencegah perilaku default link
   const todo = document.querySelector('#todo-section');
   todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
+  const ambiance = document.querySelector('#ambiance-section');
+  if(ambiance.style.display === 'block'){
+    ambiance.style.display = 'none';
+  }
+  const bgChooser = document.querySelector('.background-chooser');
+  if(bgChooser.style.display === 'block'){
+    bgChooser.style.display = 'none';
+  }
 });
 
 //ambience
 document.getElementById('music-button').addEventListener('click', function(event) {
   event.preventDefault(); // Mencegah perilaku default link
-  const todo = document.querySelector('#ambiance-section');
-  todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
+  const ambiance = document.querySelector('#ambiance-section');
+  ambiance.style.display = ambiance.style.display === 'none' || ambiance.style.display === '' ? 'block' : 'none';
+  const todo = document.querySelector('#todo-section');
+  if(todo.style.display === 'block'){
+    todo.style.display = 'none';
+  }
+  const bgChooser = document.querySelector('.background-chooser');
+  if(bgChooser.style.display === 'block'){
+    bgChooser.style.display = 'none';
+  }
 });
 
 //fire
@@ -199,6 +215,14 @@ document.querySelector('.navbar-toggle').addEventListener('click', function(even
     event.preventDefault(); // Mencegah perilaku default link
     const bgChooser = document.querySelector('.background-chooser');
     bgChooser.style.display = bgChooser.style.display === 'none' || bgChooser.style.display === '' ? 'block' : 'none';
+    const ambiance = document.querySelector('#ambiance-section');
+    if(ambiance.style.display === 'block'){
+        ambiance.style.display = 'none';
+    }
+    const todo = document.querySelector('#todo-section');
+    if(todo.style.display === 'block'){
+      todo.style.display = 'none';
+    }
 });
 
 // menampilkan salah satu background
@@ -218,28 +242,5 @@ document.addEventListener('DOMContentLoaded', () => {
             bgChooser.classList.remove('active'); 
         });
     });
-});
-
-const backgroundChoser = document.querySelector('.background-chooser'); 
-
-backgroundChoser.style.position = 'absolute';
-let offsetX, offsetY;
-
-backgroundChoser.addEventListener('mousedown', (event) => {
-    offsetX = event.clientX - backgroundChoser.getBoundingClientRect().left;
-    offsetY = event.clientY - backgroundChoser.getBoundingClientRect().top;
-
-    const mouseMoveHandler = (event) => {
-        backgroundChoser.style.left = `${event.clientX - offsetX}px`;
-        backgroundChoser.style.top = `${event.clientY - offsetY}px`;
-    };
-
-    const mouseUpHandler = () => {
-        document.removeEventListener('mousemove', mouseMoveHandler);
-        document.removeEventListener('mouseup', mouseUpHandler);
-    };
-
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
 });
 

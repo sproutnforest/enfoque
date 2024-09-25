@@ -12,7 +12,7 @@ html, body{
   background-color: #fff;
   margin: 0;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 body::-webkit-scrollbar{
   display: none;
@@ -20,11 +20,13 @@ body::-webkit-scrollbar{
 .uphead {
   display: flex;
   height: 60px;
+  width: 95%;
   justify-content: space-between;
   align-items: center;
-  background-color: #DADAD9;
-  z-index: 2;
+  background-color: #fff;
   margin: 20px 40px 0px 40px;
+  position: absolute;
+  border-radius: 5px;
 }
 .enlogo{
   font-size: 25px;
@@ -38,8 +40,14 @@ body::-webkit-scrollbar{
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 15px;
-  padding: 0px 15px;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 13px 15px;
+}
+#rightnavbutton:hover{
+  background-color: #DADAD9;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 /* Sidebar Style */
 nav {
@@ -220,18 +228,19 @@ ul li span:hover {
 #ambiance-section {
   display: none;
   width: 100%;
-  max-width: 540px;
+  max-width: 340px;
   height: 100%;
-  max-height: 370px;
+  max-height: 290px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  margin-left: 250px;
-  margin-top: 170px;
+  margin-left: 225px;
+  margin-top: 195px;
+  position: absolute;
 }
 #firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -242,7 +251,7 @@ ul li span:hover {
   align-items: center;
 }
 #firebutton img, #rainbutton img, #typebutton img, #keybutton img, #writebutton img {
-  width: 100px;
+  width: 70px;
   height: 70%;
   filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
   position: relative;
@@ -263,21 +272,21 @@ ul li span:hover {
   border-radius: 16px;
 }
 .fireslider::-webkit-slider-runnable-track, .rainslider::-webkit-slider-runnable-track, .keyslider::-webkit-slider-runnable-track, .typeslider::-webkit-slider-runnable-track, .writeslider::-webkit-slider-runnable-track {
-  height: 15px;
+  height: 10px;
   background: #DADAD9;
   border-radius: 16px;
 }
 .fireslider::-webkit-slider-thumb, .rainslider::-webkit-slider-thumb, .keyslider::-webkit-slider-thumb, .typeslider::-webkit-slider-thumb, .writeslider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none; 
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   background: url('../imageIcon/volume-low-solid.svg') no-repeat center center;
   filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
   background-size: 80%;
   border: none;
   cursor: pointer;
-  margin-top: -18px;
+  margin-top: -10px;
 }
 .Ambiance{
   display: flex;
