@@ -20,11 +20,13 @@ body::-webkit-scrollbar{
 .uphead {
   display: flex;
   height: 60px;
+  width: 95%;
   justify-content: space-between;
   align-items: center;
-  background-color: #DADAD9;
-  z-index: 2;
+  background-color: #fff;
   margin: 20px 40px 0px 40px;
+  position: absolute;
+  border-radius: 5px;
 }
 .enlogo{
   font-size: 25px;
