@@ -67,21 +67,27 @@ nav {
   overflow: hidden;
   transition: width 0.3s ease-in-out;
   box-shadow: 0 20px 35px #0000001a;
-  margin-top: 170px;
-  margin-left: 20px;
+  margin-top: 190px;
+  margin-left: 35px;
   border-radius: 15px;
-  cursor: grab;
 }
+
+@media (max-width: 768px) {
+  nav {
+    width: 90px;
+    height: 300px;
+    margin-top: 100px;
+  }
 .logo {
   text-align: center;
   display: flex;
   transition: all 1s ease;
-}
+}}
 
 .logo img {
   width: 80px;
   height: 80px;
-  padding-right: 10px;
+  padding-right: 4px;
   border-radius: 50%;
 }
 
@@ -98,7 +104,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 0px;
   margin-left: 0px;
   text-decoration: none;
   transition: background 0.3s ease;
@@ -123,34 +129,46 @@ a {
 /* <!-- 
 - #TO DO LIST
 --> */
-container-1 {
-  width: 80%;
-  min-height: 80vh;
-  margin-left: 10%;
+
+.container-1 {
+  width: 90%;
+  min-height: 100vh;
+  margin-left: 25%;
+  margin-top: 100px;
 }
+
+
 #todo-section {
   display: none;
 }
+
+
 .todo {
   width: 60%;
   max-width: 600px;
   background: #fff;
   margin: 90px auto 20px;
-  padding: 40px 30px 70px;
+  padding: 40px 40px 40px;
   border-radius: 10px;
   transition: all 0.3s ease;
+  margin-top: 190px;
+  margin-right: 350px;
+  margin-left: 100px;
 }
+
 .todo h2 {
   color: #575757;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .todo h2 img {
   width: 60px;
   margin-left: 20px;
-
 }
+
+
 .row {
   display: flex;
   align-items: center;
@@ -159,7 +177,9 @@ container-1 {
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+
 }
+
 input {
   flex: 1;
   border: none;
@@ -170,11 +190,11 @@ input {
 
 ul li {
   list-style: none;
-  padding: px px px px;
+  padding: 10px 10px 10px 10px;
   user-select: none;
-
   position: relative;
 }
+
 
 ul li.checked {
   color: #555;
@@ -182,10 +202,12 @@ ul li.checked {
 }
 
 ul li.checked::before {
+  content: '';
   color: #555;
   text-decoration: line-through;
   background-image: url(./imageIcon/checked.png);
 }
+
 ul li span {
   position: absolute;
   right: 0%;
@@ -198,6 +220,35 @@ ul li span {
   text-align: center;
   border-radius:50%;
 }
+
+
+@media (max-width: 480px) {
+  .todo {
+    width: 95%;
+    margin-top: 30px;
+    padding: 20px;
+    margin-right: 0;
+  }
+
+  .todo h2 img {
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  ul li span {
+    position: absolute;
+    right: 0%;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius:50%;
+}}
+
+
 
 /* Ambiance */
 #ambiance-section {
