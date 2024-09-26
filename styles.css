@@ -134,7 +134,9 @@ a {
   width: 90%;
   min-height: 100vh;
   margin-left: 25%;
-  margin-top: 100px;
+  position: relative;
+  display: block;
+  /* transform: translate(-50%,-50%) ; */
 }
 
 
@@ -154,6 +156,10 @@ a {
   margin-top: 190px;
   margin-right: 350px;
   margin-left: 100px;
+ position: relative;
+ display: block;
+background: rgba(255, 255, 255, 0.9);
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 .todo h2 {
@@ -259,7 +265,7 @@ ul li span {
   max-height: 290px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
   margin-left: 225px;
   margin-top: 195px;
   position: absolute;
@@ -352,7 +358,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: right 0.3s ease;
   z-index: 1000;
   margin-left: 200px;
