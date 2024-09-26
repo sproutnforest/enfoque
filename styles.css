@@ -13,8 +13,8 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  overflow: visible;
-  overflow: visible;
+  overflow: hidden;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -22,11 +22,15 @@ body::-webkit-scrollbar {
 .uphead {
   display: flex;
   height: 60px;
+  width: 95%;
   justify-content: space-between;
   align-items: center;
-  background-color: #dadad9;
+  background-color: #DADAD9;
   z-index: 2;
-  margin: 20px 40px 0px 40px;
+  background-color: #fff;
+  margin: 20px 40px 10px 40px;
+  position: absolute;
+  border-radius: 5px;
 }
 .enlogo {
   font-size: 25px;
@@ -40,8 +44,9 @@ body::-webkit-scrollbar {
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 15px;
-  padding: 0px 15px;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 13px 15px;
 }
 #rightnavabout:hover, #rightnavcontact:hover{
   background-color: #DADAD9;
@@ -201,22 +206,19 @@ ul li span {
 #ambiance-section {
   display: none;
   width: 100%;
-  max-width: 540px;
+  max-width: 340px;
   height: 100%;
-  max-height: 370px;
+  max-height: 290px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  margin-left: 250px;
-  margin-top: 170px;
+  margin-left: 225px;
+  margin-top: 195px;
+  position: absolute;
 }
-#firebutton,
-#rainbutton,
-#typebutton,
-#keybutton,
-#writebutton {
-  width: 50px;
-  height: 50px;
+#firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
+  width: 30px;
+  height: 30px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -226,64 +228,45 @@ ul li span {
   justify-content: center;
   align-items: center;
 }
-#firebutton img,
-#rainbutton img,
-#typebutton img,
-#keybutton img,
-#writebutton img {
-  width: 100px;
+#firebutton img, #rainbutton img, #typebutton img, #keybutton img, #writebutton img {
+  width: 70px;
   height: 70%;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
-    hue-rotate(185deg) brightness(91%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
   position: relative;
   z-index: 10;
 }
 #ambicon {
   width: 10%;
   height: 10%;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
-    hue-rotate(185deg) brightness(91%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
 }
-.fireslider,
-.rainslider,
-.keyslider,
-.typeslider,
-.writeslider {
+.fireslider, .rainslider, .keyslider, .typeslider, .writeslider {
   -webkit-appearance: none;
-  appearance: none;
+  appearance: none; 
   width: 100%;
   cursor: pointer;
   outline: none;
   overflow: visible;
   border-radius: 16px;
 }
-.fireslider::-webkit-slider-runnable-track,
-.rainslider::-webkit-slider-runnable-track,
-.keyslider::-webkit-slider-runnable-track,
-.typeslider::-webkit-slider-runnable-track,
-.writeslider::-webkit-slider-runnable-track {
-  height: 15px;
-  background: #dadad9;
+.fireslider::-webkit-slider-runnable-track, .rainslider::-webkit-slider-runnable-track, .keyslider::-webkit-slider-runnable-track, .typeslider::-webkit-slider-runnable-track, .writeslider::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #DADAD9;
   border-radius: 16px;
 }
-.fireslider::-webkit-slider-thumb,
-.rainslider::-webkit-slider-thumb,
-.keyslider::-webkit-slider-thumb,
-.typeslider::-webkit-slider-thumb,
-.writeslider::-webkit-slider-thumb {
+.fireslider::-webkit-slider-thumb, .rainslider::-webkit-slider-thumb, .keyslider::-webkit-slider-thumb, .typeslider::-webkit-slider-thumb, .writeslider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
-  height: 50px;
-  width: 50px;
-  background: url("../imageIcon/volume-low-solid.svg") no-repeat center center;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
-    hue-rotate(185deg) brightness(91%);
+  appearance: none; 
+  height: 30px;
+  width: 30px;
+  background: url('../imageIcon/volume-low-solid.svg') no-repeat center center;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
   background-size: 80%;
   border: none;
   cursor: pointer;
-  margin-top: -18px;
+  margin-top: -10px;
 }
-.Ambiance {
+.Ambiance{
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -291,24 +274,18 @@ ul li span {
   min-height: 100vh;
   padding: 25px;
   border-radius: 7%;
+
 }
-.fire,
-.key,
-.rain,
-.type,
-.write {
+.fire, .key, .rain, .type, .write{
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
-.firevolume,
-.rainvolume,
-.keyvolume,
-.typevolume,
-.writevolume {
+.firevolume, .rainvolume, .keyvolume, .typevolume, .writevolume{
   flex-grow: 3;
 }
+
 
 /* Background choser*/
 body {
@@ -366,7 +343,6 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
 .about {
   position: relative;
   top: 53%;
@@ -376,7 +352,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 1050px;
+  width: 60vw;
+  height: 70vh
 }
 .brenda, .eryca, .gea{
   background-color: #fff;
@@ -398,36 +375,11 @@ body {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 1300px) {
-  .about {
-    gap: 10px;
-    width: 800px;
-  }
-  #deve img{
-    width: 200px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .about {
-    gap: 10px;
-    width: 600px;
-  }
-  #deve img{
-    width: 150px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .about {
-    gap: 10px;
-    width: 450px;
-  }
-  #deve img{
-    width: 70px;
-  }
-}
-
-@media screen and (max-width: 800px) and (max-height: 400px) {
+@media screen and (max-height: 410px) {
   .about {
     display: none;
   }
-}
+  .brenda, .eryca, .gea{
+    display: none;
+  }
+} 
