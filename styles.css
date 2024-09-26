@@ -12,7 +12,7 @@ html, body{
   background-color: #fff;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 body::-webkit-scrollbar{
   display: none;
@@ -36,7 +36,7 @@ body::-webkit-scrollbar{
 .rightnav{
   padding-right: 50px;
 }
-#rightnavbutton{
+#rightnavabout, #rightnavcontact{
   border: none;
   outline: none;
   background-color: transparent;
@@ -44,7 +44,7 @@ body::-webkit-scrollbar{
   font-weight: 400;
   padding: 13px 15px;
 }
-#rightnavbutton:hover{
+#rightnavabout:hover, #rightnavcontact:hover{
   background-color: #DADAD9;
   transition: 0.3s;
   border-radius: 5px;
@@ -362,4 +362,69 @@ body {
   height: 100vh; 
   object-fit: cover; 
   z-index: -1; 
+}
+
+.about {
+  position: relative;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 1050px;
+}
+.brenda, .eryca, .gea{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+}
+#deve {
+  flex-direction: column;
+  gap: 5px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 100px;
+}
+#deve img{
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1300px) {
+  .about {
+    gap: 10px;
+    width: 800px;
+  }
+  #deve img{
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .about {
+    gap: 10px;
+    width: 600px;
+  }
+  #deve img{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about {
+    gap: 10px;
+    width: 450px;
+  }
+  #deve img{
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-height: 400px) {
+  .about {
+    display: none;
+  }
 }

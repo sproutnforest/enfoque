@@ -244,3 +244,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.getElementById('rightnavabout').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah perilaku default link
+    const about = document.querySelector('.about');
+    about.style.display = (about.style.display === 'none' || about.style.display === '') ? 'flex' : 'none';
+
+    const todo = document.querySelector('#todo-section');
+    if(todo.style.display === 'block'){
+    todo.style.display = 'none';
+    }
+    const bgChooser = document.querySelector('.background-chooser');
+    if(bgChooser.style.display === 'block'){
+    bgChooser.style.display = 'none';
+    }
+    const ambiance = document.querySelector('#ambiance-section');
+    if(ambiance.style.display === 'block'){
+        ambiance.style.display = 'none';
+    }
+});
