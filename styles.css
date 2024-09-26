@@ -8,41 +8,40 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-html, body{
+html,
+body {
   background-color: #fff;
   margin: 0;
   padding: 0;
   overflow: visible;
+  overflow: visible;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 .uphead {
   display: flex;
   height: 60px;
-  width: 95%;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #dadad9;
+  z-index: 2;
   margin: 20px 40px 0px 40px;
-  position: absolute;
-  border-radius: 5px;
 }
-.enlogo{
+.enlogo {
   font-size: 25px;
   padding-left: 50px;
   font-weight: 500;
 }
-.rightnav{
+.rightnav {
   padding-right: 50px;
 }
 #rightnavabout, #rightnavcontact{
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 17px;
-  font-weight: 400;
-  padding: 13px 15px;
+  font-size: 15px;
+  padding: 0px 15px;
 }
 #rightnavabout:hover, #rightnavcontact:hover{
   background-color: #DADAD9;
@@ -54,17 +53,19 @@ body::-webkit-scrollbar{
 --> */
 
 nav {
-  width: 8%;
-  height: 450px;
+  width: 115px;
+  height: 350px;
   background-color: #fff;
   position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;
-  transition: width 0.2s linear;
+  transition: width 0.3s ease-in-out;
   box-shadow: 0 20px 35px #0000001a;
   margin-top: 170px;
   margin-left: 30px;
+  border-radius: 15px;
+  cursor: grab;
 }
 
 .logo {
@@ -74,10 +75,10 @@ nav {
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   padding-right: 10px;
-  border-radius: 0%;
+  border-radius: 50%;
 }
 
 .logo span {
@@ -89,33 +90,30 @@ nav {
 a {
   position: relative;
   color: rgba(87, 87, 87);
-  font-size: 5px;
-  display: table;
-  width: 300px;
-  padding: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.fas {
-  position: relative;
-  width: -10px;
-  height: 5px;
-  top: 10px;
-  font-size: 15px;
+.icon:hover,
+.navbar-toggle:hover,
+#todo-button:hover,
+#music-button:hover {
+  background: #dadad9;
+}
+.logo:hover {
+  cursor: default;
 }
 
 .nav-item {
-  position: relative;
-  top: 10px;
-  margin-left: 0px;
-}
-
-a:hover {
-  background: #dadad9;
-}
-
-nav:hover {
-  width: 10px;
-  transition: all 200s ease;
+  margin-left: 20px;
 }
 
 /* <!-- 
@@ -123,23 +121,21 @@ nav:hover {
 --> */
 
 .container-1 {
-  width: 100%;
-  min-height: 100vh;
-  padding: 10px;
+  width: 80%;
+  min-height: 80vh;
+  margin-left: 20%;
 }
-#todo-section{
-  display:none;
+#todo-section {
+  display: none;
 }
 .todo {
   width: 60%;
-  max-width: 1500px;
+  max-width: 600px;
   background: #fff;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
-  /*display: none;
-  */transition: all 0.3s ease;
-
+  transition: all 0.3s ease;
 }
 .todo h2 {
   color: #575757;
@@ -167,15 +163,7 @@ input {
   background: transparent;
   padding: 10px;
 }
-#todobutton {
-  border: none;
-  outline: none;
-  padding: 10px 50px;
-  background: #868686;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 40px;
-}
+
 ul li {
   list-style: none;
   padding: px px px px;
@@ -183,18 +171,7 @@ ul li {
 
   position: relative;
 }
-/* ul li::before {
-  content: "";
-  position: absolute;
-  height: 28px;
-  width: 28px;
-  border-radius: 50px;
-  background-image: url(./imageIcon/unchecked.png);
-  background-size: cover;
-  background-position: center;
-  top: 12px;
-  left: 8px;
-} */
+
 ul li.checked {
   color: #555;
   text-decoration: line-through;
@@ -217,9 +194,6 @@ ul li span {
   border-radius: 50%;
 }
 
-ul li span:hover {
-  background: #dadad9;
-}
 /* 
 <!-- #List Priority Eisenhower Matrix --> */
 
@@ -227,19 +201,22 @@ ul li span:hover {
 #ambiance-section {
   display: none;
   width: 100%;
-  max-width: 340px;
+  max-width: 540px;
   height: 100%;
-  max-height: 290px;
+  max-height: 370px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  margin-left: 225px;
-  margin-top: 195px;
-  position: absolute;
+  margin-left: 250px;
+  margin-top: 170px;
 }
-#firebutton, #rainbutton, #typebutton, #keybutton, #writebutton {
-  width: 30px;
-  height: 30px;
+#firebutton,
+#rainbutton,
+#typebutton,
+#keybutton,
+#writebutton {
+  width: 50px;
+  height: 50px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -249,45 +226,64 @@ ul li span:hover {
   justify-content: center;
   align-items: center;
 }
-#firebutton img, #rainbutton img, #typebutton img, #keybutton img, #writebutton img {
-  width: 70px;
+#firebutton img,
+#rainbutton img,
+#typebutton img,
+#keybutton img,
+#writebutton img {
+  width: 100px;
   height: 70%;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
+    hue-rotate(185deg) brightness(91%);
   position: relative;
   z-index: 10;
 }
 #ambicon {
   width: 10%;
   height: 10%;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
+    hue-rotate(185deg) brightness(91%);
 }
-.fireslider, .rainslider, .keyslider, .typeslider, .writeslider {
+.fireslider,
+.rainslider,
+.keyslider,
+.typeslider,
+.writeslider {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   width: 100%;
   cursor: pointer;
   outline: none;
   overflow: visible;
   border-radius: 16px;
 }
-.fireslider::-webkit-slider-runnable-track, .rainslider::-webkit-slider-runnable-track, .keyslider::-webkit-slider-runnable-track, .typeslider::-webkit-slider-runnable-track, .writeslider::-webkit-slider-runnable-track {
-  height: 10px;
-  background: #DADAD9;
+.fireslider::-webkit-slider-runnable-track,
+.rainslider::-webkit-slider-runnable-track,
+.keyslider::-webkit-slider-runnable-track,
+.typeslider::-webkit-slider-runnable-track,
+.writeslider::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #dadad9;
   border-radius: 16px;
 }
-.fireslider::-webkit-slider-thumb, .rainslider::-webkit-slider-thumb, .keyslider::-webkit-slider-thumb, .typeslider::-webkit-slider-thumb, .writeslider::-webkit-slider-thumb {
+.fireslider::-webkit-slider-thumb,
+.rainslider::-webkit-slider-thumb,
+.keyslider::-webkit-slider-thumb,
+.typeslider::-webkit-slider-thumb,
+.writeslider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none; 
-  height: 30px;
-  width: 30px;
-  background: url('../imageIcon/volume-low-solid.svg') no-repeat center center;
-  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%);
+  appearance: none;
+  height: 50px;
+  width: 50px;
+  background: url("../imageIcon/volume-low-solid.svg") no-repeat center center;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%)
+    hue-rotate(185deg) brightness(91%);
   background-size: 80%;
   border: none;
   cursor: pointer;
-  margin-top: -10px;
+  margin-top: -18px;
 }
-.Ambiance{
+.Ambiance {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -295,15 +291,22 @@ ul li span:hover {
   min-height: 100vh;
   padding: 25px;
   border-radius: 7%;
-
 }
-.fire, .key, .rain, .type, .write{
+.fire,
+.key,
+.rain,
+.type,
+.write {
   display: flex;
   gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
-.firevolume, .rainvolume, .keyvolume, .typevolume, .writevolume{
+.firevolume,
+.rainvolume,
+.keyvolume,
+.typevolume,
+.writevolume {
   flex-grow: 3;
 }
 
@@ -320,33 +323,33 @@ body {
   display: none;
   top: 20px;
   left: 20px;
-  width: 200px; 
+  width: 200px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease; 
-  z-index: 1000; 
+  transition: right 0.3s ease;
+  z-index: 1000;
   margin-left: 200px;
   margin-top: 170px;
 }
 
 .background-chooser.active {
-  right: 20px; 
+  right: 20px;
 }
 
 .choices {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px; 
+  gap: 10px;
 }
 
 .choice {
   cursor: pointer;
   border-radius: 5px;
   transition: transform 0.3s;
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
@@ -359,9 +362,9 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; 
-  object-fit: cover; 
-  z-index: -1; 
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .about {

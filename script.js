@@ -44,35 +44,35 @@ function showTasks() {
 
 showTasks();
 
-// show list button side bar -> to do list
-document.getElementById('todo-button').addEventListener('click', function(event) {
-  event.preventDefault(); // Mencegah perilaku default link
-  const todo = document.querySelector('#todo-section');
-  todo.style.display = todo.style.display === 'none' || todo.style.display === '' ? 'block' : 'none';
-  const ambiance = document.querySelector('#ambiance-section');
-  if(ambiance.style.display === 'block'){
-    ambiance.style.display = 'none';
+function toggleDisplay(showSectionId, hideSectionIds) {
+    const showSection = document.querySelector(`#${showSectionId}`);
+    showSection.style.display = showSection.style.display === 'none' || showSection.style.display === '' ? 'block' : 'none';
+  
+    hideSectionIds.forEach(id => {
+      const section = document.querySelector(`#${id}`);
+      if (section.style.display === 'block') {
+        section.style.display = 'none';
+      }
+    });
+  
+    const bgChooser = document.querySelector('.background-chooser');
+    if (bgChooser.style.display === 'block') {
+      bgChooser.style.display = 'none';
+    }
   }
-  const bgChooser = document.querySelector('.background-chooser');
-  if(bgChooser.style.display === 'block'){
-    bgChooser.style.display = 'none';
-  }
-});
-
-//ambience
-document.getElementById('music-button').addEventListener('click', function(event) {
-  event.preventDefault(); // Mencegah perilaku default link
-  const ambiance = document.querySelector('#ambiance-section');
-  ambiance.style.display = ambiance.style.display === 'none' || ambiance.style.display === '' ? 'block' : 'none';
-  const todo = document.querySelector('#todo-section');
-  if(todo.style.display === 'block'){
-    todo.style.display = 'none';
-  }
-  const bgChooser = document.querySelector('.background-chooser');
-  if(bgChooser.style.display === 'block'){
-    bgChooser.style.display = 'none';
-  }
-});
+  
+  // To-Do Button Event
+  document.getElementById('todo-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleDisplay('todo-section', ['ambiance-section']);
+  });
+  
+  // Music Button Event
+  document.getElementById('music-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleDisplay('ambiance-section', ['todo-section']);
+  });
+  
 
 //fire
 var firePlaying = false;
