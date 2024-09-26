@@ -22,42 +22,48 @@
         <button id="rightnavcontact">Contact</button>
       </div>
     </div>
-
+  <div class="side">
     <nav>
       <ul>
         <li>
           <a href="#" class="logo">
-            <img src="./imageIcon/logoUntar.jpg" alt="" />
+            <img src="./imageIcon/logoUntar.png" alt="" />
             <span class="nav-item"></span>
           </a>
         </li>
         <li>
           <a href="#"  class="icon">
-            <i class="fas fa-clock"></i>
+            <i class="fas fa-clock" id="clock"></i>
             <span class="nav-item"></span>
           </a>
         </li>
         <li>
           <a href="#"  class="navbar-toggle">
-            <i class="fas fa-palette"></i>
+            <i class="fas fa-palette" id="palette"></i>
             <span class="nav-item"></span>
           </a>
         </li>
         <li>
           <a href="#"  id="todo-button">
-            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-list-ul" id="tdl"></i>
             <span class="nav-item"></span>
           </a>
         </li>
         <li>
           <a href="#"  id="music-button">
-            <i class="fas fa-music"></i>
+            <i class="fas fa-music"id="music"></i>
             <span class="nav-item"></span>
           </a>
         </li>
       </ul>
     </nav>
-
+      <div class="modetoggle">
+        <img src="imageIcon/sun-regular.svg" width="1.2%" class="togicon" id="sun">
+        <input type="checkbox" id="check">
+        <label for="check" class="buttoned"></label>
+        <img src="imageIcon/moon-solid.svg" width="1.2%" class="togicon" id="moon">
+      </div>
+  </div>
     <!-- 
         - #TO DO LIST
       -->
@@ -85,7 +91,7 @@
     <section id="ambiance-section">
       <div class="Ambiance">
         <div class="fire">
-            <img src="imageIcon/fire-solid.svg" id="ambicon">
+            <img src="imageIcon/fire-solid.svg" class="ambicon" id="fireicon">
             <button id="firebutton"><img src="imageIcon/play-solid.svg" id="fireplay"></button>
             <audio id="fireaudio" src="sounds/fireplace.mp3"></audio>
             <div class="firevolume">
@@ -93,7 +99,7 @@
             </div>
         </div>
         <div class="rain">
-            <img src="imageIcon/cloud-rain-solid.svg" id="ambicon">
+            <img src="imageIcon/cloud-rain-solid.svg" class="ambicon" id="rainicon">
             <button id="rainbutton"><img src="imageIcon/play-solid.svg" id="rainplay"></button>
             <audio id="rainaudio" src="sounds/rain.mp3"></audio>
             <div class="rainvolume">
@@ -101,7 +107,7 @@
             </div>
         </div>
         <div class="type">
-            <img src="imageIcon/typewriter_7207564.png" id="ambicon">
+            <img src="imageIcon/typewriter_7207564.png" class="ambicon" id="typeicon">
             <button id="typebutton"><img src="imageIcon/play-solid.svg" id="typeplay"></button>
             <audio id="typeaudio" src="sounds/typerwriter.mp3"></audio>
             <div class="typevolume">
@@ -109,7 +115,7 @@
             </div>
         </div>
         <div class="key">
-            <img src="imageIcon/keyboard-solid.svg" id="ambicon">
+            <img src="imageIcon/keyboard-solid.svg" class="ambicon" id="keyicon">
             <button id="keybutton"><img src="imageIcon/play-solid.svg" id="keyplay"></button>
             <audio id="keyaudio" src="sounds/keyboard.mp3"></audio>
             <div class="keyvolume">
@@ -117,7 +123,7 @@
             </div>
         </div>
         <div class="write">
-            <img src="imageIcon/pencil-solid.svg" id="ambicon">
+            <img src="imageIcon/pencil-solid.svg" class="ambicon" id="writeicon">
             <button id="writebutton"><img src="imageIcon/play-solid.svg" id="writeplay"></button>
             <audio id="writeaudio" src="sounds/writing.mp3"></audio>
             <div class="writevolume">
