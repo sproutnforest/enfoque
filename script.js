@@ -1,6 +1,8 @@
 //darkmode lightmode
+let isDarkMode = false;
 document.getElementById('check').addEventListener('change', function() {
     if(this.checked){
+        isDarkMode = true;
         document.querySelector('nav').style.backgroundColor = '#2D2D2D';
         document.querySelector('.uphead').style.backgroundColor = '#2D2D2D';
         document.querySelector('#clock').style.color = '#7F7F7F';
@@ -38,6 +40,92 @@ document.getElementById('check').addEventListener('change', function() {
         document.querySelector('#todobutton').style.backgroundColor = '#575757';
     }
     else{
+        isDarkMode = false;
+        document.querySelector('nav').style.backgroundColor = '#fff';
+        document.querySelector('.uphead').style.backgroundColor = '#fff';
+        document.querySelector('#clock').style.color = 'black';
+        document.querySelector('#palette').style.color = 'black';
+        document.querySelector('#tdl').style.color = 'black';
+        document.querySelector('#music').style.color = 'black';
+        document.querySelector('#rightnavabout').style.color = 'black';
+        document.querySelector('#rightnavcontact').style.color = 'black';
+        document.querySelector('.enlogo').style.color = 'black';
+        document.querySelector('.brenda').style.backgroundColor = '#fff';
+        document.querySelector('.eryca').style.backgroundColor = '#fff';
+        document.querySelector('.gea').style.backgroundColor = '#fff';
+        document.querySelector('.brenda').style.color = 'black';
+        document.querySelector('.eryca').style.color = 'black';
+        document.querySelector('.gea').style.color = 'black';
+        document.querySelector('.background-chooser').style.backgroundColor = '#fff';
+        document.querySelector('#ambiance-section').style.backgroundColor = '#fff';
+        document.querySelector('#fireicon').style.filter = 'none';
+        document.querySelector('#keyicon').style.filter = 'none';
+        document.querySelector('#writeicon').style.filter = 'none';
+        document.querySelector('#typeicon').style.filter = 'none';
+        document.querySelector('#rainicon').style.filter = 'none';
+        document.querySelector('#firebutton').style.filter = 'none';
+        document.querySelector('#keybutton').style.filter = 'none';
+        document.querySelector('#writebutton').style.filter = 'none';
+        document.querySelector('#typebutton').style.filter = 'none';
+        document.querySelector('#rainbutton').style.filter = 'none';
+        document.querySelector('.fireslider').style.filter = 'none';
+        document.querySelector('.rainslider').style.filter = 'none';
+        document.querySelector('.keyslider').style.filter = 'none';
+        document.querySelector('.typeslider').style.filter = 'none';
+        document.querySelector('.writeslider').style.filter = 'none';
+        document.querySelector('.todo').style.backgroundColor = '#fff';
+        document.querySelector('.row').style.backgroundColor = '#dadad9';
+        document.querySelector('#todobutton').style.backgroundColor = '#dadad9';
+    }
+
+    savemode(isDarkMode);
+});
+
+function savemode(isDarkMode){
+    localStorage.setItem("mode", isDarkMode ? "dark" : "light")
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedmode = localStorage.getItem("mode");
+    if (savedmode === "dark") {
+        document.getElementById('check').checked = true;
+        document.querySelector('nav').style.backgroundColor = '#2D2D2D';
+        document.querySelector('.uphead').style.backgroundColor = '#2D2D2D';
+        document.querySelector('#clock').style.color = '#7F7F7F';
+        document.querySelector('#palette').style.color = '#7F7F7F';
+        document.querySelector('#tdl').style.color = '#7F7F7F';
+        document.querySelector('#music').style.color = '#7F7F7F';
+        document.querySelector('#rightnavabout').style.color = '#7F7F7F';
+        document.querySelector('#rightnavcontact').style.color = '#7F7F7F';
+        document.querySelector('.enlogo').style.color = '#7F7F7F';
+        document.querySelector('.brenda').style.backgroundColor = '#2D2D2D';
+        document.querySelector('.eryca').style.backgroundColor = '#2D2D2D';
+        document.querySelector('.gea').style.backgroundColor = '#2D2D2D';
+        document.querySelector('.brenda').style.color = '#7F7F7F';
+        document.querySelector('.eryca').style.color = '#7F7F7F';
+        document.querySelector('.gea').style.color = '#7F7F7F';
+        document.querySelector('.background-chooser').style.backgroundColor = '#2D2D2D';
+        document.querySelector('#ambiance-section').style.backgroundColor = '#2D2D2D';
+        document.querySelector('#fireicon').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#rainicon').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#writeicon').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#keyicon').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#typeicon').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#firebutton').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#rainbutton').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#writebutton').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#keybutton').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('#typebutton').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.fireslider').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.rainslider').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.keyslider').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.typeslider').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.writeslider').style.filter = 'brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)';
+        document.querySelector('.todo').style.backgroundColor = '#2D2D2D';
+        document.querySelector('.row').style.backgroundColor = '#575757';
+        document.querySelector('#todobutton').style.backgroundColor = '#575757';
+    } else {
+        document.getElementById('check').checked = false;
         document.querySelector('nav').style.backgroundColor = '#fff';
         document.querySelector('.uphead').style.backgroundColor = '#fff';
         document.querySelector('#clock').style.color = 'black';
