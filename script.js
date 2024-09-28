@@ -239,7 +239,16 @@ function addTask() {
     }
   }, false);
   /* <!-- - #TO DO LIST Progress--> */
-
+  showTasks();
+  function shootConfetti() {
+    confetti({
+      particleCount: 100, 
+      spread: 80,
+      origin: { y: 0.6 }, 
+    });
+  }
+  
+  
   function updateTaskCount() {
     const totalTasks = listContainer.getElementsByTagName("li").length;
     const completedTasks = listContainer.getElementsByClassName("checked").length;
@@ -249,10 +258,12 @@ function addTask() {
     const progressPercentage = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
     progressBar.style.width = `${progressPercentage}%`;
   
-    if (totalTasks > 0 && completedTasks === totalTasks) {
-      alert("Hore! Semua tugas selesai!");
+    if (completedTasks === totalTasks && totalTasks > 0) {
+      alert("Hore! Semua tugas telah selesai!");
+      shootConfetti(); 
     }
   }
+  
   
   function saveData() {
     localStorage.setItem("data", listContainer.innerHTML);
@@ -263,7 +274,6 @@ function addTask() {
     updateTaskCount();
   }
   
-  showTasks();
   
 //------------------------------------//
 
