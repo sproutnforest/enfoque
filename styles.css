@@ -222,13 +222,24 @@ input:checked + .buttoned::before {
 --> */
 
 .container-1 {
-  width: 90%;
-  min-height: 100vh;
-  margin-left: 25%;
+  width: 80%;
+  max-height: 400px;
+  margin-left: 150px;
+  margin-top: 190px;
   position: relative;
   display: block;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
+.container-1::-webkit-scrollbar {
+  display: none;
+}
+
+.container-1 {
+  padding-bottom: 20px;
+}
 #todo-section {
   display: none;
 }
@@ -347,7 +358,7 @@ span {
 /*-- PROGRESS BAR -- */
 /*-- CONTAINER --*/
 .stats-container {
-  padding:15px;
+  padding: 15px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -381,7 +392,7 @@ span {
 #progress {
   width: 0;
   height: 100%;
-  background-color: #65c365; 
+  background-color: #65c365;
   transition: width 0.5s ease;
 }
 
@@ -395,7 +406,7 @@ span {
 #numbers {
   width: 60px;
   height: 60px;
-  background-color: #706eff; 
+  background-color: #706eff;
   color: white;
   display: flex;
   justify-content: center;
