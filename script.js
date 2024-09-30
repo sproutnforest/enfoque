@@ -144,6 +144,7 @@ function savemode(isDarkMode) {
 document.addEventListener("DOMContentLoaded", () => {
   const savedmode = localStorage.getItem("mode");
   if (savedmode === "dark") {
+    document.getElementById('check').checked = true;
     document.querySelector("nav").style.backgroundColor = "#2D2D2D";
     document.querySelector(".uphead").style.backgroundColor = "#2D2D2D";
     document.querySelector("#clock").style.color = "#7F7F7F";
