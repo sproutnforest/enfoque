@@ -18,6 +18,12 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".brenda").style.color = "#7F7F7F";
     document.querySelector(".eryca").style.color = "#7F7F7F";
     document.querySelector(".gea").style.color = "#7F7F7F";
+    document.querySelector(".cntctbrenda").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntcteryca").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntctgea").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntctbrenda").style.color = "#7F7F7F";
+    document.querySelector(".cntcteryca").style.color = "#7F7F7F";
+    document.querySelector(".cntctgea").style.color = "#7F7F7F";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#2D2D2D";
     document.querySelector("#ambiance-section").style.backgroundColor =
@@ -51,6 +57,24 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".typeslider").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".writeslider").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#igb").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#mailb").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wab").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#ige").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#maile").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wae").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#igg").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#mailg").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wag").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".todo").style.backgroundColor = "#2D2D2D";
     document.querySelector(".row").style.backgroundColor = "#575757";
@@ -72,6 +96,12 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".brenda").style.color = "black";
     document.querySelector(".eryca").style.color = "black";
     document.querySelector(".gea").style.color = "black";
+    document.querySelector(".cntctbrenda").style.backgroundColor = "#fff";
+    document.querySelector(".cntcteryca").style.backgroundColor = "#fff";
+    document.querySelector(".cntctgea").style.backgroundColor = "#fff";
+    document.querySelector(".cntctbrenda").style.color = "black";
+    document.querySelector(".cntcteryca").style.color = "black";
+    document.querySelector(".cntctgea").style.color = "black";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#fff";
     document.querySelector("#ambiance-section").style.backgroundColor = "#fff";
@@ -90,6 +120,15 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".keyslider").style.filter = "none";
     document.querySelector(".typeslider").style.filter = "none";
     document.querySelector(".writeslider").style.filter = "none";
+    document.querySelector("#igb").style.filter = "none";
+    document.querySelector("#mailb").style.filter = "none";
+    document.querySelector("#wab").style.filter = "none";
+    document.querySelector("#ige").style.filter = "none";
+    document.querySelector("#maile").style.filter = "none";
+    document.querySelector("#wae").style.filter = "none";
+    document.querySelector("#igg").style.filter = "none";
+    document.querySelector("#mailg").style.filter = "none";
+    document.querySelector("#wag").style.filter = "none";
     document.querySelector(".todo").style.backgroundColor = "#fff";
     document.querySelector(".row").style.backgroundColor = "#dadad9";
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
@@ -105,7 +144,6 @@ function savemode(isDarkMode) {
 document.addEventListener("DOMContentLoaded", () => {
   const savedmode = localStorage.getItem("mode");
   if (savedmode === "dark") {
-    document.getElementById("check").checked = true;
     document.querySelector("nav").style.backgroundColor = "#2D2D2D";
     document.querySelector(".uphead").style.backgroundColor = "#2D2D2D";
     document.querySelector("#clock").style.color = "#7F7F7F";
@@ -121,6 +159,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".brenda").style.color = "#7F7F7F";
     document.querySelector(".eryca").style.color = "#7F7F7F";
     document.querySelector(".gea").style.color = "#7F7F7F";
+    document.querySelector(".cntctbrenda").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntcteryca").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntctgea").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".cntctbrenda").style.color = "#7F7F7F";
+    document.querySelector(".cntcteryca").style.color = "#7F7F7F";
+    document.querySelector(".cntctgea").style.color = "#7F7F7F";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#2D2D2D";
     document.querySelector("#ambiance-section").style.backgroundColor =
@@ -155,11 +199,28 @@ document.addEventListener("DOMContentLoaded", () => {
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".writeslider").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#igb").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#mailb").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wab").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#ige").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#maile").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wae").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+      document.querySelector("#igg").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#mailg").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#wag").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".todo").style.backgroundColor = "#2D2D2D";
     document.querySelector(".row").style.backgroundColor = "#575757";
     document.querySelector("#todobutton").style.backgroundColor = "#575757";
   } else {
-    document.getElementById("check").checked = false;
     document.querySelector("nav").style.backgroundColor = "#fff";
     document.querySelector(".uphead").style.backgroundColor = "#fff";
     document.querySelector("#clock").style.color = "black";
@@ -175,6 +236,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".brenda").style.color = "black";
     document.querySelector(".eryca").style.color = "black";
     document.querySelector(".gea").style.color = "black";
+    document.querySelector(".cntctbrenda").style.backgroundColor = "#fff";
+    document.querySelector(".cntcteryca").style.backgroundColor = "#fff";
+    document.querySelector(".cntctgea").style.backgroundColor = "#fff";
+    document.querySelector(".cntctbrenda").style.color = "black";
+    document.querySelector(".cntcteryca").style.color = "black";
+    document.querySelector(".cntctgea").style.color = "black";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#fff";
     document.querySelector("#ambiance-section").style.backgroundColor = "#fff";
@@ -193,6 +260,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".keyslider").style.filter = "none";
     document.querySelector(".typeslider").style.filter = "none";
     document.querySelector(".writeslider").style.filter = "none";
+    document.querySelector("#igb").style.filter = "none";
+    document.querySelector("#mailb").style.filter = "none";
+    document.querySelector("#wab").style.filter = "none";
+    document.querySelector("#ige").style.filter = "none";
+    document.querySelector("#maile").style.filter = "none";
+    document.querySelector("#wae").style.filter = "none";
+    document.querySelector("#igg").style.filter = "none";
+    document.querySelector("#mailg").style.filter = "none";
+    document.querySelector("#wag").style.filter = "none";
     document.querySelector(".todo").style.backgroundColor = "#fff";
     document.querySelector(".row").style.backgroundColor = "#dadad9";
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
@@ -486,13 +562,43 @@ document.addEventListener("DOMContentLoaded", () => {
 document
   .getElementById("rightnavabout")
   .addEventListener("click", function (event) {
-    event.preventDefault(); // Mencegah perilaku default link
+    event.preventDefault();
     const about = document.querySelector(".about");
     about.style.display =
       about.style.display === "none" || about.style.display === ""
         ? "flex"
         : "none";
+    const contact = document.querySelector(".contact");
+    if (contact.style.display === "flex") {
+      contact.style.display = "none";
+    }
+    const todo = document.querySelector("#todo-section");
+    if (todo.style.display === "block") {
+      todo.style.display = "none";
+    }
+    const bgChooser = document.querySelector(".background-chooser");
+    if (bgChooser.style.display === "block") {
+      bgChooser.style.display = "none";
+    }
+    const ambiance = document.querySelector("#ambiance-section");
+    if (ambiance.style.display === "block") {
+      ambiance.style.display = "none";
+    }
+  });
 
+  document
+  .getElementById("rightnavcontact")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const contact = document.querySelector(".contact");
+    contact.style.display =
+      contact.style.display === "none" || contact.style.display === ""
+        ? "flex"
+        : "none";
+    const about = document.querySelector(".about");
+    if (about.style.display === "flex") {
+      about.style.display = "none";
+    }
     const todo = document.querySelector("#todo-section");
     if (todo.style.display === "block") {
       todo.style.display = "none";

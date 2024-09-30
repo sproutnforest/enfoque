@@ -13,7 +13,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -573,7 +573,7 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-.about {
+.about{
   position: relative;
   top: 53%;
   left: 53%;
@@ -584,6 +584,46 @@ body {
   gap: 20px;
   width: 60vw;
   height: 70vh;
+}
+.contact{
+  position: relative;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 60vw;
+  height: 70vh;
+}
+.cntctbrenda,
+.cntcteryca,
+.cntctgea {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 30vw;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.contactlinks{
+  position: relative;
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.instagram, .whatsapp,.email{
+  display: flex;
+  align-items: center;
 }
 .brenda,
 .eryca,
@@ -615,6 +655,46 @@ body {
   .brenda,
   .eryca,
   .gea {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact {
+    display: none;
+  }
+  .cntctbrenda,
+  .cntcteryca,
+  .cntctgea {
+    display: none;
+  }
+  .contactlinks{
+    display: none;
+  }
+  .instagram, .whatsapp,.email{
+    display: none;
+  }
+}
+@media screen and (max-height: 400px) {
+  .contact {
+    padding-top: 70px;
+  }
+}
+@media screen and (max-height: 240px) {
+  .contact {
+    display: none;
+  }
+  .cntctbrenda,
+  .cntcteryca,
+  .cntctgea {
+    display: none;
+  }
+  .contactlinks{
+    display: none;
+  }
+  .instagram, .whatsapp,.email{
     display: none;
   }
 }
