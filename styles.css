@@ -244,45 +244,36 @@ input:checked + .buttoned::before {
 /* <!-- 
 - #TO DO LIST
 --> */
-
 .container-1 {
-  width: 80%;
-  max-height: 400px;
-  margin-left: 150px;
-  margin-top: 190px;
+  width: 100%;  
+  max-width: 600px; 
+  max-height: 390px;
+  margin-left: auto;
+  margin-right: 100px;
   position: relative;
   display: block;
   overflow-y: scroll;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 0;
+  margin: 0 auto; 
+  box-sizing: border-box; 
 }
 
 .container-1::-webkit-scrollbar {
   display: none;
 }
 
-.container-1 {
-  padding-bottom: 20px;
-}
-#todo-section {
-  display: none;
-}
-
 .todo {
-  width: 60%;
+  width: 100%; 
   max-width: 600px;
   background: #fff;
-  margin: 90px auto 20px;
-  padding: 40px 40px 40px;
+  padding: 40px;
   border-radius: 10px;
   transition: all 0.3s ease;
-  margin-top: 180px;
-  margin-right: 340px;
-  margin-left: 10px;
-  position: relative;
-  display: block;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  margin: 0 auto; 
 }
 
 .todo h2 {
