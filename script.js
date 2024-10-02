@@ -286,9 +286,7 @@ const progressBar = document.getElementById("progress");
 const statsNumber = document.getElementById("numbers");
 
 function addTask() {
-    if (inputBox.value === "") {
-      alert("You must write something!");
-    } else {
+    if (inputBox.value === "") {} else {
       let li = document.createElement("li");
       li.innerHTML = inputBox.value;
       
