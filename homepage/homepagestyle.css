@@ -10,7 +10,6 @@
 }
 html,
 body {
-  background-color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -34,7 +33,7 @@ body::-webkit-scrollbar {
   width: 98%;
   justify-content: space-between;
   align-items: center;
-  background-color: #DADAD9;
+  background-color: #2D2D2D;
   height: 80px;
   position: fixed;
   left: 50%;
@@ -94,7 +93,6 @@ body::-webkit-scrollbar {
     font-size: 0.85vw;
     font-weight: 600;
     border-radius: 5%;
-    background-color: #DADAD9;
 }
 #quotebutton:hover{
     cursor: pointer;
@@ -102,9 +100,30 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
+/*focus research*/
+.focusresearch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  text-align: center;
+  margin: 15vh 15vw;
+  padding: 5vh;
+  border-radius: 10px;
+  background-color: #4c4c4c;
+  gap: 2vh;
+}
+.focusresearch p{
+  width: 60vw;
+}
+#brains{
+  width: 25vw;
+}
+
 /*about and contact*/
 .aboutncontact{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   top: 50%;
@@ -114,7 +133,7 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 20px;
   width: 100vw;
-  margin-top: 100vh;
+  margin-top: 40vh;
 }
 #ourteam {
   font-size: 2vw;
@@ -135,12 +154,12 @@ body::-webkit-scrollbar {
   text-align: center;
   font-size: 1vw;
   gap: 3vh;
+  background-color: #999898;
 }
 
 #deve {
   flex-direction: column;
   gap: 5px;
-  background-color: #DADAD9;
   padding: 20px;
 }
 #deve img {
@@ -157,18 +176,18 @@ body::-webkit-scrollbar {
   gap: 10px;
 }
 
-.igb, .wab{
+#igb, #wab, #ige, #wae, #igg, #wag{
   scale: 0.6;
 }
-.mailb{
+#mailb, #maile, #mailg{
   scale: 0.8;
 }
 
-.igb:hover, .wab:hover{
+#igb:hover, #wab:hover, #ige:hover, #wae:hover, #igg:hover, #wag:hover{
   scale: 0.8;
   transition: 0.3s;
 }
-.mailb:hover{
+#mailb:hover, #maile:hover, #mailg:hover{
   scale: 1;
   transition: 0.3s;
 }
@@ -182,6 +201,7 @@ body::-webkit-scrollbar {
   left: 90vw;
   top: 90vh;
   width: auto;
+  z-index: 10;
 }
 #sun {
   width: 25px;
