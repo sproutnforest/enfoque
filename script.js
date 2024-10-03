@@ -11,7 +11,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#music").style.color = "#7F7F7F";
     document.querySelector("#rightnavabout").style.color = "#7F7F7F";
     document.querySelector("#rightnavcontact").style.color = "#7F7F7F";
-    document.querySelector(".enlogo").style.color = "#7F7F7F";
+    // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
     document.querySelector(".gea").style.backgroundColor = "#2D2D2D";
@@ -58,7 +58,17 @@ document.getElementById("check").addEventListener("change", function () {
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".writeslider").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
-      document.querySelector("#igb").style.filter =
+    document.querySelector("#firevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#rainvolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#keyvolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#typevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#writevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#igb").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector("#mailb").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
@@ -89,7 +99,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#music").style.color = "black";
     document.querySelector("#rightnavabout").style.color = "black";
     document.querySelector("#rightnavcontact").style.color = "black";
-    document.querySelector(".enlogo").style.color = "black";
+    // document.querySelector(".enlogo").style.color = "black";
     document.querySelector(".brenda").style.backgroundColor = "#fff";
     document.querySelector(".eryca").style.backgroundColor = "#fff";
     document.querySelector(".gea").style.backgroundColor = "#fff";
@@ -120,6 +130,11 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".keyslider").style.filter = "none";
     document.querySelector(".typeslider").style.filter = "none";
     document.querySelector(".writeslider").style.filter = "none";
+    document.querySelector("#firevolicon").style.filter = "none";
+    document.querySelector("#rainvolicon").style.filter = "none";
+    document.querySelector("#keyvolicon").style.filter = "none";
+    document.querySelector("#typevolicon").style.filter = "none";
+    document.querySelector("#writevolicon").style.filter = "none";
     document.querySelector("#igb").style.filter = "none";
     document.querySelector("#mailb").style.filter = "none";
     document.querySelector("#wab").style.filter = "none";
@@ -153,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#music").style.color = "#7F7F7F";
     document.querySelector("#rightnavabout").style.color = "#7F7F7F";
     document.querySelector("#rightnavcontact").style.color = "#7F7F7F";
-    document.querySelector(".enlogo").style.color = "#7F7F7F";
+    // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
     document.querySelector(".gea").style.backgroundColor = "#2D2D2D";
@@ -200,7 +215,17 @@ document.addEventListener("DOMContentLoaded", () => {
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector(".writeslider").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
-      document.querySelector("#igb").style.filter =
+      document.querySelector("#firevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#rainvolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#keyvolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#typevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#writevolicon").style.filter =
+      "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
+    document.querySelector("#igb").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector("#mailb").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
@@ -230,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#music").style.color = "black";
     document.querySelector("#rightnavabout").style.color = "black";
     document.querySelector("#rightnavcontact").style.color = "black";
-    document.querySelector(".enlogo").style.color = "black";
+    // document.querySelector(".enlogo").style.color = "black";
     document.querySelector(".brenda").style.backgroundColor = "#fff";
     document.querySelector(".eryca").style.backgroundColor = "#fff";
     document.querySelector(".gea").style.backgroundColor = "#fff";
@@ -261,6 +286,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".keyslider").style.filter = "none";
     document.querySelector(".typeslider").style.filter = "none";
     document.querySelector(".writeslider").style.filter = "none";
+    document.querySelector("#firevolicon").style.filter = "none";
+    document.querySelector("#rainvolicon").style.filter = "none";
+    document.querySelector("#keyvolicon").style.filter = "none";
+    document.querySelector("#typevolicon").style.filter = "none";
+    document.querySelector("#writevolicon").style.filter = "none";
     document.querySelector("#igb").style.filter = "none";
     document.querySelector("#mailb").style.filter = "none";
     document.querySelector("#wab").style.filter = "none";
@@ -372,6 +402,14 @@ function toggleDisplay(showSectionId, hideSectionIds) {
   if (bgChooser.style.display === "block") {
     bgChooser.style.display = "none";
   }
+  const about = document.querySelector(".about");
+  if (about.style.display === "flex") {
+    about.style.display = "none";
+  }
+  const contact = document.querySelector(".contact");
+  if (contact.style.display === "flex") {
+    contact.style.display = "none";
+  }
 }
 
 // To-Do Button Event
@@ -409,9 +447,19 @@ document.getElementById("firebutton").addEventListener("click", function () {
 });
 var fslider = document.getElementById("fireslider");
 fslider.oninput = function () {
-  if (firePlaying) {
-    var audio = document.getElementById("fireaudio");
-    audio.volume = this.value / 100;
+  var audio = document.getElementById("fireaudio");
+  audio.volume = this.value / 100;
+  if(audio.volume <= 0.5){
+    document.getElementById("firevolicon").src = "../imageIcon/volume-low-solid.svg";
+    document.getElementById("firevolicon").style.width = "21px";
+  }
+  if(audio.volume <= 0.05){
+    document.getElementById("firevolicon").src = "../imageIcon/volume-off-solid.svg";
+    document.getElementById("firevolicon").style.width = "16px";
+  }
+  if(audio.volume > 0.5){
+    document.getElementById("firevolicon").src = "../imageIcon/volume-high-solid.svg";
+    document.getElementById("firevolicon").style.width = "30px";
   }
 };
 //keyboard
@@ -433,9 +481,19 @@ document.getElementById("keybutton").addEventListener("click", function () {
 });
 var kslider = document.getElementById("keyslider");
 kslider.oninput = function () {
-  if (keyPlaying) {
-    var audio = document.getElementById("keyaudio");
-    audio.volume = this.value / 100;
+  var audio = document.getElementById("keyaudio");
+  audio.volume = this.value / 100;
+  if(audio.volume <= 0.5){
+    document.getElementById("keyvolicon").src = "../imageIcon/volume-low-solid.svg";
+    document.getElementById("keyvolicon").style.width = "21px";
+  }
+  if(audio.volume <= 0.05){
+    document.getElementById("keyvolicon").src = "../imageIcon/volume-off-solid.svg";
+    document.getElementById("keyvolicon").style.width = "16px";
+  }
+  if(audio.volume > 0.5){
+    document.getElementById("keyvolicon").src = "../imageIcon/volume-high-solid.svg";
+    document.getElementById("keyvolicon").style.width = "30px";
   }
 };
 //rain
@@ -457,9 +515,19 @@ document.getElementById("rainbutton").addEventListener("click", function () {
 });
 var rslider = document.getElementById("rainslider");
 rslider.oninput = function () {
-  if (rainPlaying) {
-    var audio = document.getElementById("rainaudio");
-    audio.volume = this.value / 100;
+  var audio = document.getElementById("rainaudio");
+  audio.volume = this.value / 100;
+  if(audio.volume <= 0.5){
+    document.getElementById("rainvolicon").src = "../imageIcon/volume-low-solid.svg";
+    document.getElementById("rainvolicon").style.width = "21px";
+  }
+  if(audio.volume <= 0.05){
+    document.getElementById("rainvolicon").src = "../imageIcon/volume-off-solid.svg";
+    document.getElementById("rainvolicon").style.width = "16px";
+  }
+  if(audio.volume > 0.5){
+    document.getElementById("rainvolicon").src = "../imageIcon/volume-high-solid.svg";
+    document.getElementById("rainvolicon").style.width = "30px";
   }
 };
 //typewriter
@@ -481,9 +549,19 @@ document.getElementById("typebutton").addEventListener("click", function () {
 });
 var tslider = document.getElementById("typeslider");
 tslider.oninput = function () {
-  if (typePlaying) {
-    var audio = document.getElementById("typeaudio");
-    audio.volume = this.value / 100;
+  var audio = document.getElementById("typeaudio");
+  audio.volume = this.value / 100;
+  if(audio.volume <= 0.5){
+    document.getElementById("typevolicon").src = "../imageIcon/volume-low-solid.svg";
+    document.getElementById("typevolicon").style.width = "21px";
+  }
+  if(audio.volume <= 0.05){
+    document.getElementById("typevolicon").src = "../imageIcon/volume-off-solid.svg";
+    document.getElementById("typevolicon").style.width = "16px";
+  }
+  if(audio.volume > 0.5){
+    document.getElementById("typevolicon").src = "../imageIcon/volume-high-solid.svg";
+    document.getElementById("typevolicon").style.width = "30px";
   }
 };
 //writing
@@ -505,9 +583,19 @@ document.getElementById("writebutton").addEventListener("click", function () {
 });
 var wslider = document.getElementById("writeslider");
 wslider.oninput = function () {
-  if (writePlaying) {
-    var audio = document.getElementById("writeaudio");
-    audio.volume = this.value / 100;
+  var audio = document.getElementById("writeaudio");
+  audio.volume = this.value / 100;
+  if(audio.volume <= 0.5){
+    document.getElementById("writevolicon").src = "../imageIcon/volume-low-solid.svg";
+    document.getElementById("writevolicon").style.width = "21px";
+  }
+  if(audio.volume <= 0.05){
+    document.getElementById("writevolicon").src = "../imageIcon/volume-off-solid.svg";
+    document.getElementById("writevolicon").style.width = "16px";
+  }
+  if(audio.volume > 0.5){
+    document.getElementById("writevolicon").src = "../imageIcon/volume-high-solid.svg";
+    document.getElementById("writevolicon").style.width = "30px";
   }
 };
 
@@ -550,7 +638,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
   };
-  setBackground("../background/library.jpg");
+  setBackground("../background/studyroom.jpg");
   document.querySelectorAll(".choice").forEach((choice) => {
     choice.addEventListener("click", (event) => {
       const imageUrl = event.target.src;
