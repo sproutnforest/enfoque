@@ -598,53 +598,62 @@ wslider.oninput = function () {
 };
 
 /* Background choser*/
+const bgChooser = document.querySelector(".background-chooser");
+const setBackground = (imageUrl) => {
+  document.body.style.backgroundImage = `url(${imageUrl})`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+};
+
+// Set background default saat halaman dimuat
+setBackground("../background/room.jpg");
+
+// Menambahkan event listener untuk pilihan background
 document.querySelectorAll(".choice").forEach((choice) => {
   choice.addEventListener("click", (event) => {
-    const bgUrl = event.target.src;
-    document.body.style.backgroundImage = `url(${bgUrl})`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.querySelector(".background-chooser").classList.remove("active");
+    const bgUrl = event.target.src; 
+    setBackground(bgUrl); 
+    bgChooser.classList.remove("active"); 
   });
 });
 
-document
-  .querySelector(".navbar-toggle")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Mencegah perilaku default link
-    const bgChooser = document.querySelector(".background-chooser");
-    bgChooser.style.display =
-      bgChooser.style.display === "none" || bgChooser.style.display === ""
-        ? "block"
-        : "none";
-    const ambiance = document.querySelector("#ambiance-section");
-    if (ambiance.style.display === "block") {
-      ambiance.style.display = "none";
-    }
-    const todo = document.querySelector("#todo-section");
-    if (todo.style.display === "block") {
-      todo.style.display = "none";
-    }
-  });
+// Menambahkan event listener untuk toggle navbar
+document.querySelector(".navbar-toggle").addEventListener("click", function (event) {
+  event.preventDefault(); // Mencegah perilaku default link
+  const bgChooser = document.querySelector(".background-chooser");
+  bgChooser.style.display =
+    bgChooser.style.display === "none" || bgChooser.style.display === ""
+      ? "block"
+      : "none";
+  const ambiance = document.querySelector("#ambiance-section");
+  if (ambiance.style.display === "block") {
+    ambiance.style.display = "none";
+  }
+  const todo = document.querySelector("#todo-section");
+  if (todo.style.display === "block") {
+    todo.style.display = "none";
+  }
+});
+
 
 // menampilkan salah satu background
-document.addEventListener("DOMContentLoaded", () => {
-  const bgChooser = document.querySelector(".background-chooser");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const bgChooser = document.querySelector(".background-chooser");
 
-  const setBackground = (imageUrl) => {
-    document.body.style.backgroundImage = `url(${imageUrl})`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-  };
-  setBackground("../background/room.jpg");
-  document.querySelectorAll(".choice").forEach((choice) => {
-    choice.addEventListener("click", (event) => {
-      const imageUrl = event.target.src;
-      setBackground(imageUrl);
-      bgChooser.classList.remove("active");
-    });
-  });
-});
+//   const setBackground = (imageUrl) => {
+//     document.body.style.backgroundImage = `url(${imageUrl})`;
+//     document.body.style.backgroundSize = "cover";
+//     document.body.style.backgroundPosition = "center";
+//   };
+//   setBackground("../background/room.jpg");
+//   document.querySelectorAll(".choice").forEach((choice) => {
+//     choice.addEventListener("click", (event) => {
+//       const imageUrl = event.target.src;
+//       setBackground(imageUrl);
+//       bgChooser.classList.remove("active");
+//     });
+//   });
+// });
 
 document
   .getElementById("rightnavabout")
