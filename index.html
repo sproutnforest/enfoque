@@ -34,7 +34,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="icon">
+            <a href="#" class="icon" id="timerToggle">
               <i class="fas fa-clock fa-2x" id="clock"></i>
               <span class="nav-item"></span>
             </a>
@@ -287,6 +287,24 @@
       </div>
     </div>
     </div>
+    <div class="pomodoro-timer-box">
+      <div class="pomodoro-timer">
+        <h1>Pomodoro Timer</h1>
+        <div id="timer">25:00</div>
+        <div class="buttons">
+          <button id="start">Mulai</button>
+          <button id="pause">Jeda</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div class="settings">
+          <label for="workTime">Waktu Kerja:</label>
+          <input type="number" id="workTime" value="25" min="1">
+          <label for="breakTime">Waktu Istirahat:</label>
+          <input type="number" id="breakTime" value="5" min="1">
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
