@@ -137,7 +137,7 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 20px;
   width: 100vw;
-  margin-top: 40vh;
+  margin-top: 250px;
 }
 #ourteam {
   font-size: 2vw;
@@ -146,6 +146,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 7vw;
   width: 70vw;
+  height: fit-content;
 }
 .brenda,
 .eryca,
@@ -343,4 +344,57 @@ input:checked + .buttoned::before {
   }
   .untar p{
     padding: 0.75vh 0vw;
+  }
+  @media (max-width: 800px) {
+    .theteam{
+      flex-direction: column;
+      width: 30vw;
+    }
+    .aboutncontact{
+      margin-top: 600px;
+      margin-bottom: -400px;
+    }
+    .brenda,
+    .eryca,
+    .gea {
+      font-size: 1.5vw;
+    }
+    #ourteam {
+      font-size: 3vw;
+    }
+  }
+  @media (max-width: 650px) {
+    .footer{
+      flex-direction: column;
+      font-size: 2vw;
+    }
+    .divider{
+      width: 90vw;
+      height: 0.15vh;
+    }
+    .aboutncontact{
+      margin-top: 550px;
+    }
+    .brenda,
+    .eryca,
+    .gea {
+      font-size: 2vw;
+    }
+    #ourteam {
+      font-size: 4vw;
+    }
+  }
+  @media (max-width: 550px) {
+    .aboutncontact{
+      margin-top: 450px;
+      margin-bottom: -350px;
+    }
+    .brenda,
+    .eryca,
+    .gea {
+      font-size: 2vw;
+    }
+    #ourteam {
+      font-size: 4vw;
+    }
   }
