@@ -8,6 +8,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#quotebutton").style.color = "#DADAD9";
     document.body.style.backgroundColor = "#3B3B3B";
     document.body.style.color = "#DADAD9";
+    document.querySelector(".footer").style.color="#fff";
     document.querySelector(".focusresearch").style.backgroundColor = "#4C4C4C";
     document.querySelector(".brenda").style.backgroundColor = "#4C4C4C";
     document.querySelector(".eryca").style.backgroundColor = "#4C4C4C";
@@ -41,6 +42,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".eryca").style.backgroundColor = "#B5B5B5";
     document.querySelector(".gea").style.backgroundColor = "#B5B5B5";
     document.body.style.color = "black";
+    document.querySelector(".footer").style.color="#fff";
     document.querySelector("#igb").style.filter =
       "none";
     document.querySelector("#mailb").style.filter =
@@ -80,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".eryca").style.backgroundColor = "#4C4C4C";
     document.querySelector(".gea").style.backgroundColor = "#4C4C4C";
     document.body.style.color = "#DADAD9";
+    document.querySelector(".footer").style.color="#fff";
     document.querySelector("#igb").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
     document.querySelector("#mailb").style.filter =
@@ -108,6 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".eryca").style.backgroundColor = "#B5B5B5";
     document.querySelector(".gea").style.backgroundColor = "#B5B5B5";
     document.body.style.color = "black";
+    document.querySelector(".footer").style.color="#fff";
+    document.querySelector(".footer").color="#fff";
     document.querySelector("#igb").style.filter =
       "none";
     document.querySelector("#mailb").style.filter =
