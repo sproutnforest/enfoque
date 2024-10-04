@@ -616,13 +616,22 @@ wslider.oninput = function () {
 };
 
 /* Background choser*/
+const bgChooser = document.querySelector(".background-chooser");
+const setBackground = (imageUrl) => {
+  document.body.style.backgroundImage = `url(${imageUrl})`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+};
+
+// Set background default saat halaman dimuat
+setBackground("../background/room.jpg");
+
+// Menambahkan event listener untuk pilihan background
 document.querySelectorAll(".choice").forEach((choice) => {
   choice.addEventListener("click", (event) => {
-    const bgUrl = event.target.src;
-    document.body.style.backgroundImage = `url(${bgUrl})`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.querySelector(".background-chooser").classList.remove("active");
+    const bgUrl = event.target.src; 
+    setBackground(bgUrl); 
+    bgChooser.classList.remove("active"); 
   });
 });
 
@@ -633,24 +642,25 @@ document
     toggleDisplay("background-chooser", ["container-1", "ambiance-section"]);
   });
 
-// menampilkan salah satu background
-document.addEventListener("DOMContentLoaded", () => {
-  const bgChooser = document.querySelector(".background-chooser");
 
-  const setBackground = (imageUrl) => {
-    document.body.style.backgroundImage = `url(${imageUrl})`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-  };
-  setBackground("../background/studyroom.jpg");
-  document.querySelectorAll(".choice").forEach((choice) => {
-    choice.addEventListener("click", (event) => {
-      const imageUrl = event.target.src;
-      setBackground(imageUrl);
-      bgChooser.classList.remove("active");
-    });
-  });
-});
+// menampilkan salah satu background
+// document.addEventListener("DOMContentLoaded", () => {
+//   const bgChooser = document.querySelector(".background-chooser");
+
+//   const setBackground = (imageUrl) => {
+//     document.body.style.backgroundImage = `url(${imageUrl})`;
+//     document.body.style.backgroundSize = "cover";
+//     document.body.style.backgroundPosition = "center";
+//   };
+//   setBackground("../background/room.jpg");
+//   document.querySelectorAll(".choice").forEach((choice) => {
+//     choice.addEventListener("click", (event) => {
+//       const imageUrl = event.target.src;
+//       setBackground(imageUrl);
+//       bgChooser.classList.remove("active");
+//     });
+//   });
+// });
 
 document
   .getElementById("rightnavabout")
