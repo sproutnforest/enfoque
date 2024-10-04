@@ -45,9 +45,13 @@ body::-webkit-scrollbar {
 }
 .enlogo {
   font-size: 25px;
-  /* padding-left: 50px; */
   font-weight: 500;
   color: #A01626;
+  background-color: transparent;
+}
+.enlogo:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 #focusbutton{
     border: none;

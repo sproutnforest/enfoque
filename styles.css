@@ -33,9 +33,14 @@ body::-webkit-scrollbar {
 }
 .enlogo {
   font-size: 25px;
-  padding-left: 50px;
+  padding: 0px 0px 0px 50px;
   font-weight: 500;
-  color: #A01626
+  color: #A01626;
+  background-color: transparent;
+}
+.enlogo:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .rightnav {
   padding-right: 50px;
@@ -50,7 +55,7 @@ body::-webkit-scrollbar {
   padding: 13px 15px;
 }
 #rightnavabout:hover,
-#rightnavcontact:hover {
+#rightnavcontact:hover{
   transition: 0.3s;
   border-radius: 5px;
   font-size: 18px;
@@ -255,7 +260,7 @@ input:checked + .buttoned::before {
   margin-left: auto;
   margin-right: 100px;
   position: relative;
-  display: block;
+  display: none;
   overflow-y: scroll;
   border: 1px solid #ccc;
   padding: 0;
@@ -436,7 +441,7 @@ span {
 }
 
 /* Ambiance */
-#ambiance-section {
+.ambiance-section {
   display: none;
   width: 100%;
   max-width: 340px;

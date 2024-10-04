@@ -9,8 +9,8 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#palette").style.color = "#7F7F7F";
     document.querySelector("#tdl").style.color = "#7F7F7F";
     document.querySelector("#music").style.color = "#7F7F7F";
-    document.querySelector("#rightnavabout").style.color = "#7F7F7F";
-    document.querySelector("#rightnavcontact").style.color = "#7F7F7F";
+    document.querySelector("#rightnavabout").style.color = "#fff";
+    document.querySelector("#rightnavcontact").style.color = "#fff";
     // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
@@ -26,7 +26,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".cntctgea").style.color = "#7F7F7F";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#2D2D2D";
-    document.querySelector("#ambiance-section").style.backgroundColor =
+    document.querySelector(".ambiance-section").style.backgroundColor =
       "#2D2D2D";
     document.querySelector("#fireicon").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
@@ -114,7 +114,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".cntctgea").style.color = "black";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#fff";
-    document.querySelector("#ambiance-section").style.backgroundColor = "#fff";
+    document.querySelector(".ambiance-section").style.backgroundColor = "#fff";
     document.querySelector("#fireicon").style.filter = "none";
     document.querySelector("#keyicon").style.filter = "none";
     document.querySelector("#writeicon").style.filter = "none";
@@ -166,8 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#palette").style.color = "#7F7F7F";
     document.querySelector("#tdl").style.color = "#7F7F7F";
     document.querySelector("#music").style.color = "#7F7F7F";
-    document.querySelector("#rightnavabout").style.color = "#7F7F7F";
-    document.querySelector("#rightnavcontact").style.color = "#7F7F7F";
+    document.querySelector("#rightnavabout").style.color = "#fff";
+    document.querySelector("#rightnavcontact").style.color = "#fff";
     // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".cntctgea").style.color = "#7F7F7F";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#2D2D2D";
-    document.querySelector("#ambiance-section").style.backgroundColor =
+    document.querySelector(".ambiance-section").style.backgroundColor =
       "#2D2D2D";
     document.querySelector("#fireicon").style.filter =
       "brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%)";
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".cntctgea").style.color = "black";
     document.querySelector(".background-chooser").style.backgroundColor =
       "#fff";
-    document.querySelector("#ambiance-section").style.backgroundColor = "#fff";
+    document.querySelector(".ambiance-section").style.backgroundColor = "#fff";
     document.querySelector("#fireicon").style.filter = "none";
     document.querySelector("#keyicon").style.filter = "none";
     document.querySelector("#writeicon").style.filter = "none";
@@ -383,30 +383,48 @@ function addTask() {
 //------------------------------------//
 
 function toggleDisplay(showSectionId, hideSectionIds) {
-  const showSection = document.querySelector(`#${showSectionId}`);
+  const showSection = document.querySelector(`.${showSectionId}`);
   showSection.style.display =
     showSection.style.display === "none" || showSection.style.display === ""
       ? "block"
       : "none";
-
   hideSectionIds.forEach((id) => {
-    const section = document.querySelector(`#${id}`);
+    const section = document.querySelector(`.${id}`);
     if (section.style.display === "block") {
       section.style.display = "none";
     }
   });
-
-  const bgChooser = document.querySelector(".background-chooser");
-  if (bgChooser.style.display === "block") {
-    bgChooser.style.display = "none";
-  }
+  const contact = document.querySelector(".contact");
+    if (contact.style.display === "flex") {
+      contact.style.display = "none";
+    }
   const about = document.querySelector(".about");
   if (about.style.display === "flex") {
     about.style.display = "none";
   }
-  const contact = document.querySelector(".contact");
-  if (contact.style.display === "flex") {
-    contact.style.display = "none";
+}
+
+function navDisplay(showSectionid, hideSectionid) {
+  const showSection = document.querySelector(`.${showSectionid}`);
+  showSection.style.display =
+    showSection.style.display === "none" || showSection.style.display === ""
+      ? "flex"
+      : "none";
+  const hideSection = document.querySelector(`.${hideSectionid}`);
+  if (hideSection.style.display === "flex") {
+    hideSection.style.display = "none";
+  }
+  const ambiance = document.querySelector('.ambiance-section');
+  if(ambiance.style.display === 'block'){
+    ambiance.style.display = 'none';
+  }
+  const bgChooser = document.querySelector('.background-chooser');
+  if(bgChooser.style.display === 'block'){
+    bgChooser.style.display = 'none';
+  }
+  const todo = document.querySelector('.container-1');
+  if(todo.style.display === 'block'){
+    todo.style.display = 'none';
   }
 }
 
@@ -415,7 +433,7 @@ document
   .getElementById("todo-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    toggleDisplay("todo-section", ["ambiance-section"]);
+    toggleDisplay("container-1", ["ambiance-section", "background-chooser"]);
   });
 
 // Music Button Event
@@ -423,7 +441,7 @@ document
   .getElementById("music-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    toggleDisplay("ambiance-section", ["todo-section"]);
+    toggleDisplay("ambiance-section", ["container-1", "background-chooser"]);
   });
 
 //fire
@@ -612,19 +630,7 @@ document
   .querySelector(".navbar-toggle")
   .addEventListener("click", function (event) {
     event.preventDefault(); // Mencegah perilaku default link
-    const bgChooser = document.querySelector(".background-chooser");
-    bgChooser.style.display =
-      bgChooser.style.display === "none" || bgChooser.style.display === ""
-        ? "block"
-        : "none";
-    const ambiance = document.querySelector("#ambiance-section");
-    if (ambiance.style.display === "block") {
-      ambiance.style.display = "none";
-    }
-    const todo = document.querySelector("#todo-section");
-    if (todo.style.display === "block") {
-      todo.style.display = "none";
-    }
+    toggleDisplay("background-chooser", ["container-1", "ambiance-section"]);
   });
 
 // menampilkan salah satu background
@@ -650,52 +656,12 @@ document
   .getElementById("rightnavabout")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const about = document.querySelector(".about");
-    about.style.display =
-      about.style.display === "none" || about.style.display === ""
-        ? "flex"
-        : "none";
-    const contact = document.querySelector(".contact");
-    if (contact.style.display === "flex") {
-      contact.style.display = "none";
-    }
-    const todo = document.querySelector("#todo-section");
-    if (todo.style.display === "block") {
-      todo.style.display = "none";
-    }
-    const bgChooser = document.querySelector(".background-chooser");
-    if (bgChooser.style.display === "block") {
-      bgChooser.style.display = "none";
-    }
-    const ambiance = document.querySelector("#ambiance-section");
-    if (ambiance.style.display === "block") {
-      ambiance.style.display = "none";
-    }
+    navDisplay("about", "contact");
   });
 
   document
   .getElementById("rightnavcontact")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const contact = document.querySelector(".contact");
-    contact.style.display =
-      contact.style.display === "none" || contact.style.display === ""
-        ? "flex"
-        : "none";
-    const about = document.querySelector(".about");
-    if (about.style.display === "flex") {
-      about.style.display = "none";
-    }
-    const todo = document.querySelector("#todo-section");
-    if (todo.style.display === "block") {
-      todo.style.display = "none";
-    }
-    const bgChooser = document.querySelector(".background-chooser");
-    if (bgChooser.style.display === "block") {
-      bgChooser.style.display = "none";
-    }
-    const ambiance = document.querySelector("#ambiance-section");
-    if (ambiance.style.display === "block") {
-      ambiance.style.display = "none";
-    }
+    navDisplay("contact", "about");
   });
