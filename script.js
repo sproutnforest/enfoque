@@ -636,7 +636,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
   };
-  setBackground("../background/studyroom.jpg");
+  setBackground("../background/room.jpg");
   document.querySelectorAll(".choice").forEach((choice) => {
     choice.addEventListener("click", (event) => {
       const imageUrl = event.target.src;
