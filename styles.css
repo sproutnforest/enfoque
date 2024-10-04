@@ -253,11 +253,17 @@ input:checked + .buttoned::before {
 /* <!-- 
 - #TO DO LIST
 --> */
+.wrap{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display:flex;
+}
 
 
 .container-1 {
   width: 100%;  
-  max-width: 600px; 
+  max-width: 400px; 
   max-height: 390px;
   margin-left: auto;
   margin-right: 100px;
@@ -276,15 +282,16 @@ input:checked + .buttoned::before {
 
 .todo {
   width: 100%; 
-  max-width: 600px;
+  max-width: 400px;
   background: #fff;
-  padding: 40px;
+  padding: 10px;
   border-radius: 10px;
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
   position: relative;
   margin: 0 auto; 
+
 }
 
 .todo h2 {
