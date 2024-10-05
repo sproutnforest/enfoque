@@ -442,6 +442,43 @@ span {
   gap: 20px; /* Space between the progress bar and circle */
 }
 
+/* filtering to do list*/
+
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.filters button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  background-color: #575757;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#completed-tasks:hover {
+  background-color: #86ca58;
+}
+#pending-tasks:hover {
+  background-color: #d05454;
+}
+#all-tasks:hover {
+  background-image: url("./image/image.png");
+}
+
 /*-- CIRCLE NUMBER DISPLAY --*/
 #numbers {
   width: 60px;
@@ -453,7 +490,6 @@ span {
   align-items: center;
   border-radius: 50%;
   font-size: 18px;
-  font-weight: bold;
 }
 
 /* Ambiance */

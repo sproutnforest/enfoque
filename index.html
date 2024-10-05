@@ -81,6 +81,7 @@
     <div class="wrap">
          <div class="container-1">
            <div class="todo">
+            
              <div class="stats-container">
                <div class="details">
                  <h2>
@@ -107,12 +108,15 @@
    
              <div class="row">
                <input type="text" id="input-box" placeholder="Add your text" />
-               <button onclick="addTask()" id="todobutton">Add Notes</button>
-             </div>
-             <ul id="list-container"></ul>
-           </div>
-         </div>
-       </div>
+               <button onclick="addTask()" id="todobutton">Add Notes</button> </div>
+               <div class="filters">
+                <button id="all-tasks">Show All</button>
+                <button id="pending-tasks">Pending</button>
+                <button id="completed-tasks">Completed</button>
+              </div>
+              <div><ul id="list-container"></ul></div>
+          </div>
+        </div>
      </div>
        </section>
     <!--Ambiance-->

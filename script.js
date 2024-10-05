@@ -330,9 +330,9 @@ function addTask() {
       saveData();
     }
     inputBox.value = "";
-  }
+}
   
-  listContainer.addEventListener("click", function (e) {
+listContainer.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
       updateTaskCount();
@@ -342,19 +342,20 @@ function addTask() {
       updateTaskCount();
       saveData();
     }
-  }, false);
-  /* <!-- - #TO DO LIST Progress--> */
-  showTasks();
-  function shootConfetti() {
+}, false);
+
+/* <!-- - #TO DO LIST Progress--> */
+showTasks();
+
+function shootConfetti() {
     confetti({
       particleCount: 100, 
       spread: 80,
       origin: { y: 0.6 }, 
     });
-  }
+}
   
-  
-  function updateTaskCount() {
+function updateTaskCount() {
     const totalTasks = listContainer.getElementsByTagName("li").length;
     const completedTasks = listContainer.getElementsByClassName("checked").length;
     
@@ -367,18 +368,46 @@ function addTask() {
       alert("Hore! Semua tugas telah selesai!");
       shootConfetti(); 
     }
-  }
+}
   
-  
-  function saveData() {
+function saveData() {
     localStorage.setItem("data", listContainer.innerHTML);
-  }
+}
   
-  function showTasks() {
+function showTasks() {
     listContainer.innerHTML = localStorage.getItem("data");
     updateTaskCount();
-  }
+}
+
+//------- filtering todo list ----//
+document.getElementById("all-tasks").addEventListener("click", function () {
+    let tasks = document.querySelectorAll("li");
+    tasks.forEach(task => {
+      task.style.display = "block";
+    });
+});
   
+document.getElementById("pending-tasks").addEventListener("click", function () {
+    let tasks = document.querySelectorAll("li");
+    tasks.forEach(task => {
+      if (task.classList.contains("checked")) {
+        task.style.display = "none";
+      } else {
+        task.style.display = "block";
+      }
+    });
+});
+  
+document.getElementById("completed-tasks").addEventListener("click", function () {
+    let tasks = document.querySelectorAll("li");
+    tasks.forEach(task => {
+      if (task.classList.contains("checked")) {
+        task.style.display = "block";
+      } else {
+        task.style.display = "none";
+      }
+    });
+});
   
 //------------------------------------//
 
