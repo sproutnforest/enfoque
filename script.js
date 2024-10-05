@@ -430,6 +430,10 @@ function navDisplay(showSectionid, hideSectionid) {
   if(todo.style.display === 'block'){
     todo.style.display = 'none';
   }
+  const pomodoro = document.querySelector('.pomodoro-timer-box');
+  if(pomodoro.style.display === 'block'){
+    pomodoro.style.display = 'none';
+  }
   const wrap = document.querySelector('.wrap');
   if(wrap.style.display === 'flex'){
     wrap.style.display = 'none';
