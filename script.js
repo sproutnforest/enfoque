@@ -388,9 +388,13 @@ function toggleDisplay(showSectionId, hideSectionIds) {
     showSection.style.display === "none" || showSection.style.display === ""
       ? "block"
       : "none";
+  if(showSectionId == "container-1"){
+    console.log("in");
+    document.querySelector('.wrap').style.display = "flex";
+  }
   hideSectionIds.forEach((id) => {
     const section = document.querySelector(`.${id}`);
-    if (section.style.display === "block") {
+    if (section.style.display === "block" || section.style.display === "flex") {
       section.style.display = "none";
     }
   });
@@ -426,6 +430,10 @@ function navDisplay(showSectionid, hideSectionid) {
   if(todo.style.display === 'block'){
     todo.style.display = 'none';
   }
+  const wrap = document.querySelector('.wrap');
+  if(wrap.style.display === 'flex'){
+    wrap.style.display = 'none';
+  }
 }
 
 // To-Do Button Event
@@ -433,7 +441,8 @@ document
   .getElementById("todo-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    toggleDisplay("container-1", ["ambiance-section", "background-chooser"]);
+    toggleDisplay("container-1", ["ambiance-section", "background-chooser", "pomodoro-timer-box"]);
+    // toggleDisplay("wrap", ["ambiance-section", "background-chooser", "pomodoro-timer-box"]);
   });
 
 // Music Button Event
@@ -441,7 +450,7 @@ document
   .getElementById("music-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    toggleDisplay("ambiance-section", ["container-1", "background-chooser"]);
+    toggleDisplay("ambiance-section", ["container-1", "background-chooser", "pomodoro-timer-box", "wrap"]);
   });
 
 //fire
@@ -639,7 +648,15 @@ document
   .querySelector(".navbar-toggle")
   .addEventListener("click", function (event) {
     event.preventDefault(); // Mencegah perilaku default link
-    toggleDisplay("background-chooser", ["container-1", "ambiance-section"]);
+    toggleDisplay("background-chooser", ["container-1", "ambiance-section", "pomodoro-timer-box", "wrap"]);
+  });
+
+
+  document
+  .querySelector("#timerToggle")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah perilaku default link
+    toggleDisplay("pomodoro-timer-box", ["container-1", "ambiance-section", "background-chooser", "wrap"]);
   });
 
 
@@ -669,12 +686,14 @@ document
     navDisplay("about", "contact");
   });
 
-  document
+document
   .getElementById("rightnavcontact")
   .addEventListener("click", function (event) {
     event.preventDefault();
     navDisplay("contact", "about");
 });
+
+
 
 let workTime = 25 * 60;
 let breakTime = 5 * 60;
@@ -749,18 +768,9 @@ updateTimer();
 
 let offsetX, offsetY;
 
-pomodoroTimerBox.addEventListener('mousedown', (e) => {
-  offsetX = e.clientX - pomodoroTimerBox.getBoundingClientRect().left;
-  offsetY = e.clientY - pomodoroTimerBox.getBoundingClientRect().top;
-  document.addEventListener('mousemove', mouseMoveHandler);
-});
-
-document.addEventListener('mouseup', () => {
-  document.removeEventListener('mousemove', mouseMoveHandler);
-});
-
-function mouseMoveHandler(e) {
-  pomodoroTimerBox.style.position = 'absolute';
-  pomodoroTimerBox.style.left = `${e.clientX - offsetX}px`;
-  pomodoroTimerBox.style.top = `${e.clientY - offsetY}px`;
-}
+// 
+// function mouseMoveHandler(e) {
+//   pomodoroTimerBox.style.position = 'absolute';
+//   pomodoroTimerBox.style.left = `${e.clientX - offsetX}px`;
+//   pomodoroTimerBox.style.top = `${e.clientY - offsetY}px`;
+// }

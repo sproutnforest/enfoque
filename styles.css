@@ -8,14 +8,21 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-html,
+html{
+  /* background-image: url('background/room.jpg'); */
+  /* background-size: cover; 
+  background-position: center; */
+  margin: 0;
+  padding: 0;
+  /* overflow: visible; */
+}
 body {
   background-image: url('background/room.jpg');
   background-size: cover; 
   background-position: center;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -257,7 +264,7 @@ input:checked + .buttoned::before {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  display:flex;
+  display:none;
 }
 
 
@@ -461,7 +468,7 @@ span {
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
   margin-left: 225px;
   margin-top: 195px;
-  position: fixed;
+  position: absolute;
   z-index: 1000;
 }
 #firebutton,
@@ -488,7 +495,7 @@ span {
   width: 70px;
   height: 70%;
   /* filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%); */
-  position: relative;
+  position: absolute;
   z-index: 10;
 }
 .ambicon {
@@ -774,7 +781,7 @@ body {
 }
 
 .pomodoro-timer-box {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #ffffff; /* Background putih */
@@ -827,7 +834,7 @@ button:hover {
 }
 
 .settings {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
