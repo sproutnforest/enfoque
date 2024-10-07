@@ -442,6 +442,7 @@ span {
   gap: 20px; /* Space between the progress bar and circle */
 }
 
+
 /* filtering to do list*/
 
 
@@ -478,6 +479,7 @@ form {
 #all-tasks:hover {
   background-image: url("./image/image.png");
 }
+
 
 /*-- CIRCLE NUMBER DISPLAY --*/
 #numbers {
@@ -817,7 +819,7 @@ body {
 }
 
 .pomodoro-timer-box {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #ffffff; /* Background putih */
@@ -828,6 +830,9 @@ body {
   height: auto;
   margin: auto;
   overflow: hidden;
+  /* z-index: 1000;
+  margin-left: 500px;
+  margin-top: 200px; */
 }
 
 .pomodoro-timer {
@@ -870,7 +875,7 @@ button:hover {
 }
 
 .settings {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
