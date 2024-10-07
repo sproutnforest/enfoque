@@ -817,7 +817,7 @@ body {
 }
 
 .pomodoro-timer-box {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff; /* Background putih */
@@ -870,7 +870,7 @@ button:hover {
 }
 
 .settings {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
