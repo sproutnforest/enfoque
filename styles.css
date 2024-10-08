@@ -819,36 +819,37 @@ body {
 }
 
 .pomodoro-timer-box {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff; /* Background putih */
-  padding: 20px;
+  position: absolute;
+  display: none; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  background-color: #ffffff; 
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lebih ringan */
-  width: 500px;
-  height: auto;
-  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 500px; 
+  height: auto; 
+  margin: 0; 
   overflow: hidden;
-  /* z-index: 1000;
-  margin-left: 500px;
-  margin-top: 200px; */
+  margin-left: 150px;
+  margin-top: 100px;
+
 }
 
 .pomodoro-timer {
-  background-color: #f0f0f0; /* Background abu-abu terang */
-  color: #333; /* Warna teks abu gelap */
+  background-color: #f0f0f0; 
+  color: #333; 
   font-size: 18px;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
-  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
 }
 
 #timer {
   font-size: 30px;
-  color: #000; /* Warna hitam untuk angka timer */
+  color: #000; 
   margin: 20px 0;
 }
 
@@ -859,9 +860,9 @@ body {
 }
 
 button {
-  background-color: #e0e0e0; /* Warna tombol abu-abu terang */
-  color: #000; /* Teks tombol hitam */
-  border: 1px solid #ccc; /* Garis tepi abu-abu */
+  background-color: #e0e0e0; 
+  color: #000; 
+  border: 1px solid #ccc; 
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -871,11 +872,11 @@ button {
 }
 
 button:hover {
-  background-color: #d0d0d0; /* Warna tombol sedikit lebih gelap saat di-hover */
+  background-color: #d0d0d0; 
 }
 
 .settings {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
@@ -888,10 +889,10 @@ button:hover {
   margin-left: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff; /* Background putih pada input */
+  background-color: #fff; 
 }
 
 .settings label {
   margin-right: 10px;
-  color: #333; /* Warna teks label abu gelap */
+  color: #333; 
 }
