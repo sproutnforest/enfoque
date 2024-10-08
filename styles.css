@@ -628,9 +628,9 @@ body {
   display: none;
   top: 20px;
   left: 20px;
-  width: 200px;
+  width: 300px;
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: right 0.3s ease;
@@ -645,7 +645,7 @@ body {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -653,8 +653,8 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: transform 0.3s;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
 }
 
