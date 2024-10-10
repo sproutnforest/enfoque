@@ -574,12 +574,12 @@ document.getElementById("rainbutton").addEventListener("click", function () {
     audio.play();
     audio.loop = true;
     rainPlaying = true;
-    document.getElementById("rainplay").src = "imageIcon/pause-solid.svg";
+    document.getElementById("rainplay").src = "../imageIcon/pause-solid.svg";
   } else {
     var audio = document.getElementById("rainaudio");
     audio.pause();
     rainPlaying = false;
-    document.getElementById("rainplay").src = "imageIcon/play-solid.svg";
+    document.getElementById("rainplay").src = "../imageIcon/play-solid.svg";
   }
 });
 var rslider = document.getElementById("rainslider");
@@ -609,12 +609,12 @@ document.getElementById("typebutton").addEventListener("click", function () {
     audio.play();
     audio.loop = true;
     typePlaying = true;
-    document.getElementById("typeplay").src = "imageIcon/pause-solid.svg";
+    document.getElementById("typeplay").src = "../imageIcon/pause-solid.svg";
   } else {
     var audio = document.getElementById("typeaudio");
     audio.pause();
     typePlaying = false;
-    document.getElementById("typeplay").src = "imageIcon/play-solid.svg";
+    document.getElementById("typeplay").src = "../imageIcon/play-solid.svg";
   }
 });
 var tslider = document.getElementById("typeslider");
@@ -644,12 +644,12 @@ document.getElementById("writebutton").addEventListener("click", function () {
     audio.play();
     audio.loop = true;
     writePlaying = true;
-    document.getElementById("writeplay").src = "imageIcon/pause-solid.svg";
+    document.getElementById("writeplay").src = "../imageIcon/pause-solid.svg";
   } else {
     var audio = document.getElementById("writeaudio");
     audio.pause();
     writePlaying = false;
-    document.getElementById("writeplay").src = "imageIcon/play-solid.svg";
+    document.getElementById("writeplay").src = "../imageIcon/play-solid.svg";
   }
 });
 var wslider = document.getElementById("writeslider");

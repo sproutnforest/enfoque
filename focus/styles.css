@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 html{
-  background-image: url('background/room.jpg');
+  background-image: url('../background/room.jpg');
   background-size: cover; 
   background-position: center;
   margin: 0;
@@ -358,7 +358,7 @@ ul li.checked::before {
   content: "";
   color: #555;
   text-decoration: line-through;
-  background-image: url(./imageIcon/checked.png);
+  background-image: url(../imageIcon/checked.png);
 }
 
 ul li span {
@@ -482,7 +482,7 @@ form {
   background-color: #d05454;
 }
 #all-tasks:hover {
-  background-image: url("./image/image.png");
+  background-image: url("../image/image.png");
 }
 
 #numbers {
