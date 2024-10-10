@@ -180,7 +180,7 @@ a {
 }
 @media (max-width: 700px) {
   .modetoggle {
-    left: 95vh;
+    left: 90vh;
     width: auto;
   }
 }
@@ -192,19 +192,19 @@ a {
 }
 @media (max-width: 600px) {
   .modetoggle {
-    left: 80vh;
+    left: 90vh;
     width: auto;
   }
 }
 @media (max-width: 570px) {
   .modetoggle {
-    left: 70vh;
+    left: 85vh;
     width: auto;
   }
 }
 @media (max-width: 500px) {
   .modetoggle {
-    left: 60vh;
+    left: 75vh;
     width: auto;
   }
 }
@@ -587,6 +587,12 @@ form {
   min-height: 100vh;
   padding: 25px;
   border-radius: 7%;
+}
+.Ambiance p{
+  text-align: center;
+  font-weight: 600;
+  font-size: 3vh;
+  margin-top: -8px;
 }
 .fire,
 .key,
