@@ -27,8 +27,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
-/*header navigation*/
 .uphead {
   display: flex;
   width: 98%;
@@ -71,8 +69,9 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   transform: scale(1.1);
 }
-
-/*side bar*/
+/* <!-- 
+- # SIDE BAR
+--> */
 #music,
 #clock,
 #tdl,
@@ -97,17 +96,13 @@ nav {
 @media (max-width: 768px) {
   nav {
     width: 70px;
-    height: 240px;
+    height: 340px;
     margin-top: 100px;
   }
   .logo {
     text-align: center;
     display: flex;
     transition: all 1s ease;
-  }
-  .icon-1{
-    font-size:xx-small;
-    padding: 10px;
   }
 }
 
@@ -166,8 +161,6 @@ a {
   padding-left: 15px;
   width: 85px;
 }
-
-/*dark mode light mode toggle*/
 .modetoggle {
   position: absolute;
   display: flex;
@@ -190,7 +183,7 @@ a {
 }
 @media (max-width: 700px) {
   .modetoggle {
-    left: 90vh;
+    left: 95vh;
     width: auto;
   }
 }
@@ -202,25 +195,39 @@ a {
 }
 @media (max-width: 600px) {
   .modetoggle {
-    left: 90vh;
+    left: 80vh;
     width: auto;
   }
 }
 @media (max-width: 570px) {
   .modetoggle {
-    left: 85vh;
+    left: 70vh;
     width: auto;
   }
 }
 @media (max-width: 500px) {
   .modetoggle {
-    left: 75vh;
+    left: 60vh;
     width: auto;
   }
 }
 .togicon {
   filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%)
     hue-rotate(150deg) brightness(92%) contrast(100%);
+}
+
+.row #todobutton {
+  background-color: #575757;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#todobutton:hover {
+  background: #555;
 }
 
 .buttoned {
@@ -273,11 +280,12 @@ input:checked + .buttoned::before {
 }
 
 .wrap{
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   display:none;
 }
+
 
 .container-1 {
   width: 100%;  
@@ -406,16 +414,19 @@ span {
   }
 }
 
+/*-- PROGRESS BAR -- */
+/*-- CONTAINER --*/
 .stats-container {
   padding: 15px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffdcdc1a; 
+  background-color: #ffdcdc1a; /* Dark background to match the style */
   box-shadow: 0px 4px 12px rgba(255, 250, 250, 0.3);
 }
 
+/*-- TEXT STYLING --*/
 .stats-title {
   font-size: 24px;
   font-weight: bold;
@@ -427,6 +438,7 @@ span {
   margin-top: 5px;
 }
 
+/*-- PROGRESS BAR --*/
 #progressBar {
   position: relative;
   width: 200px;
@@ -446,11 +458,13 @@ span {
 #progress-section {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Space between the progress bar and circle */
 }
 
 
-/*to-do list filter*/
+/* filtering to do list*/
+
+
 form {
   display: flex;
   justify-content: space-between;
@@ -485,6 +499,8 @@ form {
   background-image: url("./image/image.png");
 }
 
+
+/*-- CIRCLE NUMBER DISPLAY --*/
 #numbers {
   width: 60px;
   height: 60px;
@@ -497,7 +513,7 @@ form {
   font-size: 18px;
 }
 
-/* ambiance player */
+/* Ambiance */
 .ambiance-section {
   display: none;
   width: 100%;
@@ -535,12 +551,14 @@ form {
 #writebutton img {
   width: 70px;
   height: 70%;
+  /* filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%); */
   position: absolute;
   z-index: 10;
 }
 .ambicon {
   width: 10%;
   height: 10%;
+  /* filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(128%) hue-rotate(185deg) brightness(91%); */
 }
 #firevolicon, #rainvolicon, #keyvolicon, #typevolicon, #writevolicon{
   width: 30px;
@@ -598,12 +616,6 @@ form {
   padding: 25px;
   border-radius: 7%;
 }
-.Ambiance p{
-  text-align: center;
-  font-weight: 600;
-  font-size: 3vh;
-  margin-top: -8px;
-}
 .fire,
 .key,
 .rain,
@@ -622,7 +634,7 @@ form {
   flex-grow: 3;
 }
 
-/* background chooser*/
+/* Background choser*/
 body {
   margin: 0;
   padding: 0;
@@ -635,7 +647,7 @@ body {
   display: none;
   top: 20px;
   left: 20px;
-  width: 400px;
+  width: 300px;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -652,7 +664,7 @@ body {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -678,9 +690,6 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
-/*team about*/
-
 .about{
   position: relative;
   top: 53%;
@@ -693,31 +702,6 @@ body {
   width: 60vw;
   height: 70vh;
 }
-.brenda,
-.eryca,
-.gea {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
-  width: 100px;
-  text-align: center;
-}
-#deve {
-  flex-direction: column;
-  gap: 5px;
-  background-color: #fff;
-
-  padding: 20px;
-}
-#deve img {
-  width: 100%;
-  height: auto;
-}
-
-/*team contact*/
 .contact{
   position: relative;
   top: 53%;
@@ -758,11 +742,33 @@ body {
   display: flex;
   align-items: center;
 }
+.brenda,
+.eryca,
+.gea {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 100px;
+  text-align: center;
+}
 #iglink:hover, #maillink:hover, #walink:hover {
   transform: scale(1.2);
 }
+#deve {
+  flex-direction: column;
+  gap: 5px;
+  background-color: #fff;
 
-/*team about and contact responsivity*/
+  padding: 20px;
+}
+#deve img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 1000px) {
   .contact{
     font-size: 10px;
@@ -850,8 +856,8 @@ body {
 }
 
 .pomodoro-timer {
-  background-color: #fff; 
-  /* color: #333;  */
+  background-color: #f0f0f0; 
+  color: #333; 
   font-size: 18px;
   text-align: center;
   padding: 20px;

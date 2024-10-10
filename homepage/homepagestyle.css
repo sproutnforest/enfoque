@@ -16,25 +16,24 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-/*header*/
-.topimageclass{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+.topimageclass {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
-#topimage{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 70%;
+#topimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 70%;
 }
 .uphead {
   display: flex;
   width: 98%;
   justify-content: space-between;
   align-items: center;
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   height: 80px;
   position: fixed;
   left: 50%;
@@ -47,64 +46,66 @@ body::-webkit-scrollbar {
 .enlogo {
   font-size: 25px;
   font-weight: 500;
-  color: #A01626;
+  color: #a01626;
   background-color: transparent;
 }
-.enlogo:hover{
+.enlogo:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
-#focusbutton{
-    border: none;
-    padding: 1vh 1vw;
-    font-size: 1vw;
-    font-weight: 600;
-    border-radius: 5%;
-    background-color: #A01626;
-    color: #DADAD9;
+#focusbutton {
+  border: none;
+  padding: 1vh 1vw;
+  font-size: 1vw;
+  font-weight: 600;
+  border-radius: 5%;
+  background-color: #a01626;
+  color: #dadad9;
 }
-#focusbutton:hover{
+#focusbutton:hover {
   cursor: pointer;
   scale: 1.3;
   transition: 0.3s;
 }
 .rightnav {
+  /* padding-right: 40px; */
   display: flex;
 }
 #logountar {
-    width: 58px;
+  width: 58px;
 }
 .topquote {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -65%);
-    gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  gap: 2vh;
 }
-.topquote p{
-    font-weight: 900;
-    font-size: 2vw;
+.topquote p {
+  font-weight: 900;
+  font-size: 2vw;
 }
-.topquote button{
-    border: none;
-    padding: 1.5vh 1.5vw;
-    font-size: 0.85vw;
-    font-weight: 600;
-    border-radius: 5%;
+.topquote button {
+  border: none;
+  padding: 1.5vh 1.5vw;
+  font-size: 0.85vw;
+  font-weight: 600;
+  border-radius: 5%;
 }
-#quotebutton:hover{
-    cursor: pointer;
-    scale: 1.3;
-    transition: 0.3s;
+#quotebutton:hover {
+  cursor: pointer;
+  scale: 1.3;
+  transition: 0.3s;
 }
 
-/* tutorial  */
+/* tutor  */
+
 .tutor1 {
   width: 100%;
   margin-top: -100px;
@@ -120,7 +121,6 @@ body::-webkit-scrollbar {
 }
 
 .tutor1::-webkit-scrollbar {
-  
 }
 
 .tutor-1 {
@@ -134,13 +134,45 @@ body::-webkit-scrollbar {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
 }
-.judul-feature{
+.judul-feature {
   align-content: center;
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .tutor1 {
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    flex-direction: column;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .judul-feature {
+    align-content: center;
+    text-align: center;
+  }
+  .tutor-1 {
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+  }
+}
 /*focus research*/
-.focusresearch{
+.focusresearch {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,15 +185,15 @@ body::-webkit-scrollbar {
   background-color: #4c4c4c;
   gap: 2vh;
 }
-.focusresearch p{
+.focusresearch p {
   width: 60vw;
 }
-#brains{
+#brains {
   width: 25vw;
 }
 
 /*about and contact*/
-.aboutncontact{
+.aboutncontact {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -177,7 +209,7 @@ body::-webkit-scrollbar {
 #ourteam {
   font-size: 2vw;
 }
-.theteam{
+.theteam {
   display: flex;
   gap: 7vw;
   width: 70vw;
@@ -207,7 +239,7 @@ body::-webkit-scrollbar {
   height: auto;
 }
 
-.contactlinks{
+.contactlinks {
   position: relative;
   display: flex;
   height: 9vh;
@@ -216,18 +248,32 @@ body::-webkit-scrollbar {
   gap: 10px;
 }
 
-#igb, #wab, #ige, #wae, #igg, #wag{
+#igb,
+#wab,
+#ige,
+#wae,
+#igg,
+#wag {
   scale: 0.6;
 }
-#mailb, #maile, #mailg{
+#mailb,
+#maile,
+#mailg {
   scale: 0.8;
 }
 
-#igb:hover, #wab:hover, #ige:hover, #wae:hover, #igg:hover, #wag:hover{
+#igb:hover,
+#wab:hover,
+#ige:hover,
+#wae:hover,
+#igg:hover,
+#wag:hover {
   scale: 0.8;
   transition: 0.3s;
 }
-#mailb:hover, #maile:hover, #mailg:hover{
+#mailb:hover,
+#maile:hover,
+#mailg:hover {
   scale: 1;
   transition: 0.3s;
 }
@@ -305,132 +351,132 @@ input:checked + .buttoned::before {
 }
 
 @media (max-width: 700px) {
-    .modetoggle {
+  .modetoggle {
     left: 80vw;
-      width: auto;
-    }
+    width: auto;
   }
-  @media (max-width: 650px) {
-    .modetoggle {
-        left: 80vw;
-      width: auto;
-    }
+}
+@media (max-width: 650px) {
+  .modetoggle {
+    left: 80vw;
+    width: auto;
   }
-  @media (max-width: 600px) {
-    .modetoggle {
-        left: 80vw;
-      width: auto;
-    }
+}
+@media (max-width: 600px) {
+  .modetoggle {
+    left: 80vw;
+    width: auto;
   }
-  @media (max-width: 570px) {
-    .modetoggle {
-        left: 80vw;
-      width: auto;
-    }
+}
+@media (max-width: 570px) {
+  .modetoggle {
+    left: 80vw;
+    width: auto;
   }
-  @media (max-width: 500px) {
-    .modetoggle {
-      left: 80vw;
-      width: auto;
-    }
+}
+@media (max-width: 500px) {
+  .modetoggle {
+    left: 80vw;
+    width: auto;
   }
+}
 
-  /*footer*/
-  .footer{
-    display: flex;
-    background-color: #A01626;
-    padding: 7vh 7vw;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1vw;
-    gap: 5vw;
+.footer {
+  display: flex;
+  background-color: #a01626;
+  padding: 7vh 7vw;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+  gap: 5vw;
+}
+.footer p {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.footerleft {
+  width: 45vw;
+}
+.footerlogo {
+  font-size: 2.75vw;
+  font-weight: 500;
+  padding-bottom: 2vh;
+}
+.divider {
+  width: 0.15vw;
+  height: 47vh;
+  background-color: #fff;
+  margin: 0 10px;
+}
+.footerright {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.footertitle {
+  font-size: 2vw;
+  padding-bottom: 1vh;
+}
+.footericon {
+  width: 2.5vw;
+  filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%)
+    hue-rotate(150deg) brightness(92%) contrast(100%);
+}
+.untar p {
+  padding: 0.75vh 0vw;
+}
+@media (max-width: 800px) {
+  .theteam {
+    flex-direction: column;
+    width: 30vw;
   }
-  .footer p{
-    display: flex;
-    align-items: center;
-    gap: 1vw;
+  .aboutncontact {
+    margin-top: 600px;
+    margin-bottom: -400px;
   }
-  .footerleft{
-    width: 45vw;
+  .brenda,
+  .eryca,
+  .gea {
+    font-size: 1.5vw;
   }
-  .footerlogo{
-    font-size: 2.75vw;
-    font-weight: 500;
-    padding-bottom: 2vh;
+  #ourteam {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 650px) {
+  .footer {
+    flex-direction: column;
+    font-size: 2vw;
   }
   .divider {
-    width: 0.15vw;
-    height: 47vh;
-    background-color: #fff;
-    margin: 0 10px;
+    width: 90vw;
+    height: 0.15vh;
   }
-  .footerright{
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
+  .aboutncontact {
+    margin-top: 550px;
   }
-  .footertitle{
+  .brenda,
+  .eryca,
+  .gea {
     font-size: 2vw;
-    padding-bottom: 1vh;
   }
-  .footericon{
-    width: 2.5vw;
-    filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%) hue-rotate(150deg) brightness(92%) contrast(100%);
+  #ourteam {
+    font-size: 4vw;
   }
-  .untar p{
-    padding: 0.75vh 0vw;
+}
+@media (max-width: 550px) {
+  .aboutncontact {
+    margin-top: 450px;
+    margin-bottom: -350px;
   }
-  @media (max-width: 800px) {
-    .theteam{
-      flex-direction: column;
-      width: 30vw;
-    }
-    .aboutncontact{
-      margin-top: 600px;
-      margin-bottom: -400px;
-    }
-    .brenda,
-    .eryca,
-    .gea {
-      font-size: 1.5vw;
-    }
-    #ourteam {
-      font-size: 3vw;
-    }
+  .brenda,
+  .eryca,
+  .gea {
+    font-size: 2vw;
   }
-  @media (max-width: 650px) {
-    .footer{
-      flex-direction: column;
-      font-size: 2vw;
-    }
-    .divider{
-      width: 90vw;
-      height: 0.15vh;
-    }
-    .aboutncontact{
-      margin-top: 550px;
-    }
-    .brenda,
-    .eryca,
-    .gea {
-      font-size: 2vw;
-    }
-    #ourteam {
-      font-size: 4vw;
-    }
+  #ourteam {
+    font-size: 4vw;
   }
-  @media (max-width: 550px) {
-    .aboutncontact{
-      margin-top: 450px;
-      margin-bottom: -350px;
-    }
-    .brenda,
-    .eryca,
-    .gea {
-      font-size: 2vw;
-    }
-    #ourteam {
-      font-size: 4vw;
-    }
-  }
+}
