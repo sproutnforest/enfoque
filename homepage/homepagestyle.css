@@ -108,8 +108,8 @@ body::-webkit-scrollbar {
 
 .tutor1 {
   width: 100%;
-  max-width: 600px;
-  max-height: 295px;
+  max-width: 1000px;
+  max-height: 495px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -120,12 +120,12 @@ body::-webkit-scrollbar {
 }
 
 .tutor1::-webkit-scrollbar {
-  display: none;
+  
 }
 
 .tutor-1 {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   background: #fff;
   padding: 10px;
   border-radius: 10px;
