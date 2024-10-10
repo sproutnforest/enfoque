@@ -285,7 +285,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  left: 90vw;
+  right: 50px;
   top: 90vh;
   width: auto;
   z-index: 10;
@@ -351,7 +351,7 @@ input:checked + .buttoned::before {
   display: none;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .modetoggle {
     left: 80vw;
     width: auto;
@@ -380,7 +380,7 @@ input:checked + .buttoned::before {
     left: 80vw;
     width: auto;
   }
-}
+} */
 
 .footer {
   display: flex;
