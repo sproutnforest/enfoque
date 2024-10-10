@@ -351,37 +351,6 @@ input:checked + .buttoned::before {
   display: none;
 }
 
-/* @media (max-width: 700px) {
-  .modetoggle {
-    left: 80vw;
-    width: auto;
-  }
-}
-@media (max-width: 650px) {
-  .modetoggle {
-    left: 80vw;
-    width: auto;
-  }
-}
-@media (max-width: 600px) {
-  .modetoggle {
-    left: 80vw;
-    width: auto;
-  }
-}
-@media (max-width: 570px) {
-  .modetoggle {
-    left: 80vw;
-    width: auto;
-  }
-}
-@media (max-width: 500px) {
-  .modetoggle {
-    left: 80vw;
-    width: auto;
-  }
-} */
-
 .footer {
   display: flex;
   background-color: #a01626;

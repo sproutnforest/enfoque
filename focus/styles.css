@@ -188,36 +188,7 @@ a {
   height: 25px;
   padding-left: 5px;
 }
-/* @media (max-width: 700px) {
-  .modetoggle {
-    left: 90vh;
-    width: auto;
-  }
-}
-@media (max-width: 650px) {
-  .modetoggle {
-    left: 85vh;
-    width: auto;
-  }
-}
-@media (max-width: 600px) {
-  .modetoggle {
-    left: 90vh;
-    width: auto;
-  }
-}
-@media (max-width: 570px) {
-  .modetoggle {
-    left: 85vh;
-    width: auto;
-  }
-}
-@media (max-width: 500px) {
-  .modetoggle {
-    left: 75vh;
-    width: auto;
-  }
-} */
+
 .togicon {
   filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(0%)
     hue-rotate(150deg) brightness(92%) contrast(100%);
