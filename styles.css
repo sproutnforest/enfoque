@@ -96,17 +96,13 @@ nav {
 @media (max-width: 768px) {
   nav {
     width: 70px;
-    height: 240px;
+    height: 340px;
     margin-top: 100px;
   }
   .logo {
     text-align: center;
     display: flex;
     transition: all 1s ease;
-  }
-  .icon-1{
-    font-size:xx-small;
-    padding: 10px;
   }
 }
 
@@ -265,7 +261,8 @@ input:checked + .buttoned::before {
 - #TO DO LIST
 --> */
 .wrap{
-  justify-content: center;
+  justify-content: flex-start; /* Mengatur elemen di awal (kiri) */
+  margin-left: 0; /* Atur margin ke 0 agar tidak ada spasi kiri */
   align-items: center;
   min-height: 100vh;
   display:none;
@@ -276,8 +273,8 @@ input:checked + .buttoned::before {
   width: 100%;  
   max-width: 400px; 
   max-height: 390px;
-  margin-left: auto;
-  margin-right: 100px;
+  margin-left: 100px; /* Mengatur margin kiri */
+  margin-right: auto; /* Atur agar margin kanan otomatis */
   position: relative;
   display: none;
   overflow-y: scroll;
@@ -632,15 +629,15 @@ body {
   display: none;
   top: 20px;
   left: 20px;
-  width: 400px;
+  width: 300px;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: right 0.3s ease;
   z-index: 1000;
-  margin-left: 130px;
-  margin-top: 100px
+  margin-left: 200px;
+  margin-top: 170px;
 }
 
 .background-chooser.active {
@@ -649,7 +646,7 @@ body {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -675,7 +672,6 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
 .about{
   position: relative;
   top: 53%;
