@@ -11,7 +11,6 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#music").style.color = "#7F7F7F";
     document.querySelector("#rightnavabout").style.color = "#fff";
     document.querySelector("#rightnavcontact").style.color = "#fff";
-    // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
     document.querySelector(".gea").style.backgroundColor = "#2D2D2D";
@@ -89,6 +88,8 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".todo").style.backgroundColor = "#2D2D2D";
     document.querySelector(".row").style.backgroundColor = "#575757";
     document.querySelector("#todobutton").style.backgroundColor = "#575757";
+    document.querySelector(".pomodoro-timer").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".pomodoro-timer-box").style.color = "#7F7F7F";
   } else {
     isDarkMode = false;
     document.querySelector("nav").style.backgroundColor = "#fff";
@@ -99,7 +100,6 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#music").style.color = "black";
     document.querySelector("#rightnavabout").style.color = "black";
     document.querySelector("#rightnavcontact").style.color = "black";
-    // document.querySelector(".enlogo").style.color = "black";
     document.querySelector(".brenda").style.backgroundColor = "#fff";
     document.querySelector(".eryca").style.backgroundColor = "#fff";
     document.querySelector(".gea").style.backgroundColor = "#fff";
@@ -147,15 +147,18 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector(".todo").style.backgroundColor = "#fff";
     document.querySelector(".row").style.backgroundColor = "#dadad9";
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
+    document.querySelector(".pomodoro-timer").style.backgroundColor = "#fff";
+    document.querySelector(".pomodoro-timer-box").style.color = "#333";
   }
-
   savemode(isDarkMode);
 });
 
+/*saving dark mode light mode*/
 function savemode(isDarkMode) {
   localStorage.setItem("mode", isDarkMode ? "dark" : "light");
 }
 
+/*loading saved dark mode light mode*/
 document.addEventListener("DOMContentLoaded", () => {
   const savedmode = localStorage.getItem("mode");
   if (savedmode === "dark") {
@@ -168,7 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#music").style.color = "#7F7F7F";
     document.querySelector("#rightnavabout").style.color = "#fff";
     document.querySelector("#rightnavcontact").style.color = "#fff";
-    // document.querySelector(".enlogo").style.color = "#7F7F7F";
     document.querySelector(".brenda").style.backgroundColor = "#2D2D2D";
     document.querySelector(".eryca").style.backgroundColor = "#2D2D2D";
     document.querySelector(".gea").style.backgroundColor = "#2D2D2D";
@@ -246,6 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".todo").style.backgroundColor = "#2D2D2D";
     document.querySelector(".row").style.backgroundColor = "#575757";
     document.querySelector("#todobutton").style.backgroundColor = "#575757";
+    document.querySelector(".pomodoro-timer").style.backgroundColor = "#2D2D2D";
+    document.querySelector(".pomodoro-timer-box").style.color = "#7F7F7F";
   } else {
     document.querySelector("nav").style.backgroundColor = "#fff";
     document.querySelector(".uphead").style.backgroundColor = "#fff";
@@ -255,7 +259,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#music").style.color = "black";
     document.querySelector("#rightnavabout").style.color = "black";
     document.querySelector("#rightnavcontact").style.color = "black";
-    // document.querySelector(".enlogo").style.color = "black";
     document.querySelector(".brenda").style.backgroundColor = "#fff";
     document.querySelector(".eryca").style.backgroundColor = "#fff";
     document.querySelector(".gea").style.backgroundColor = "#fff";
@@ -303,17 +306,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".todo").style.backgroundColor = "#fff";
     document.querySelector(".row").style.backgroundColor = "#dadad9";
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
+    document.querySelector(".pomodoro-timer").style.backgroundColor = "#fff";
+    document.querySelector(".pomodoro-timer-box").style.color = "#333";
   }
 });
 
-/* <!-- - #TO DO LIST--> */
-
+/*to-do list*/
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
-
-/* <!-- - #TO DO LIST Progress--> */
 const progressBar = document.getElementById("progress");
 const statsNumber = document.getElementById("numbers");
+
+document
+  .getElementById("todo-button")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    toggleDisplay("container-1", ["ambiance-section", "background-chooser", "pomodoro-timer-box"]);
+  });
 
 function addTask() {
     if (inputBox.value === "") {} else {
@@ -344,7 +353,6 @@ listContainer.addEventListener("click", function (e) {
     }
 }, false);
 
-/* <!-- - #TO DO LIST Progress--> */
 showTasks();
 
 function shootConfetti() {
@@ -379,7 +387,7 @@ function showTasks() {
     updateTaskCount();
 }
 
-//------- filtering todo list ----//
+//filtering todo list//
 document.getElementById("all-tasks").addEventListener("click", function () {
     let tasks = document.querySelectorAll("li");
     tasks.forEach(task => {
@@ -408,9 +416,8 @@ document.getElementById("completed-tasks").addEventListener("click", function ()
       }
     });
 });
-  
-//------------------------------------//
 
+/*accordion buttons*/
 function toggleDisplay(showSectionId, hideSectionIds) {
   const showSection = document.querySelector(`.${showSectionId}`);
   showSection.style.display =
@@ -469,16 +476,7 @@ function navDisplay(showSectionid, hideSectionid) {
   }
 }
 
-// To-Do Button Event
-document
-  .getElementById("todo-button")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    toggleDisplay("container-1", ["ambiance-section", "background-chooser", "pomodoro-timer-box"]);
-    // toggleDisplay("wrap", ["ambiance-section", "background-chooser", "pomodoro-timer-box"]);
-  });
-
-// Music Button Event
+//ambiance player
 document
   .getElementById("music-button")
   .addEventListener("click", function (event) {
@@ -520,6 +518,7 @@ fslider.oninput = function () {
     document.getElementById("firevolicon").style.width = "30px";
   }
 };
+
 //keyboard
 var keyPlaying = false;
 document.getElementById("keybutton").addEventListener("click", function () {
@@ -554,6 +553,7 @@ kslider.oninput = function () {
     document.getElementById("keyvolicon").style.width = "30px";
   }
 };
+
 //rain
 var rainPlaying = false;
 document.getElementById("rainbutton").addEventListener("click", function () {
@@ -588,6 +588,7 @@ rslider.oninput = function () {
     document.getElementById("rainvolicon").style.width = "30px";
   }
 };
+
 //typewriter
 var typePlaying = false;
 document.getElementById("typebutton").addEventListener("click", function () {
@@ -622,6 +623,7 @@ tslider.oninput = function () {
     document.getElementById("typevolicon").style.width = "30px";
   }
 };
+
 //writing
 var writePlaying = false;
 document.getElementById("writebutton").addEventListener("click", function () {
@@ -657,18 +659,22 @@ wslider.oninput = function () {
   }
 };
 
-/* Background choser*/
+/*background chooser*/
 const bgChooser = document.querySelector(".background-chooser");
+
+document
+  .querySelector(".navbar-toggle")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    toggleDisplay("background-chooser", ["container-1", "ambiance-section", "pomodoro-timer-box", "wrap"]);
+  });
+
 const setBackground = (imageUrl) => {
   document.body.style.backgroundImage = `url(${imageUrl})`;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 };
 
-// Set background default saat halaman dimuat
-setBackground("../background/room.jpg");
-
-// Menambahkan event listener untuk pilihan background
 document.querySelectorAll(".choice").forEach((choice) => {
   choice.addEventListener("click", (event) => {
     const bgUrl = event.target.src; 
@@ -677,56 +683,13 @@ document.querySelectorAll(".choice").forEach((choice) => {
   });
 });
 
+//pomodoro timer
 document
-  .querySelector(".navbar-toggle")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Mencegah perilaku default link
-    toggleDisplay("background-chooser", ["container-1", "ambiance-section", "pomodoro-timer-box", "wrap"]);
-  });
-
-
-  document
-  .querySelector("#timerToggle")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Mencegah perilaku default link
-    toggleDisplay("pomodoro-timer-box", ["container-1", "ambiance-section", "background-chooser", "wrap"]);
-  });
-
-
-// menampilkan salah satu background
-// document.addEventListener("DOMContentLoaded", () => {
-//   const bgChooser = document.querySelector(".background-chooser");
-
-//   const setBackground = (imageUrl) => {
-//     document.body.style.backgroundImage = `url(${imageUrl})`;
-//     document.body.style.backgroundSize = "cover";
-//     document.body.style.backgroundPosition = "center";
-//   };
-//   setBackground("../background/room.jpg");
-//   document.querySelectorAll(".choice").forEach((choice) => {
-//     choice.addEventListener("click", (event) => {
-//       const imageUrl = event.target.src;
-//       setBackground(imageUrl);
-//       bgChooser.classList.remove("active");
-//     });
-//   });
-// });
-
-document
-  .getElementById("rightnavabout")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    navDisplay("about", "contact");
-  });
-
-document
-  .getElementById("rightnavcontact")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    navDisplay("contact", "about");
+.querySelector("#timerToggle")
+.addEventListener("click", function (event) {
+  event.preventDefault();
+  toggleDisplay("pomodoro-timer-box", ["container-1", "ambiance-section", "background-chooser", "wrap"]);
 });
-
-
 
 let workTime = 25 * 60;
 let breakTime = 5 * 60;
@@ -801,9 +764,18 @@ updateTimer();
 
 let offsetX, offsetY;
 
-// 
-// function mouseMoveHandler(e) {
-//   pomodoroTimerBox.style.position = 'absolute';
-//   pomodoroTimerBox.style.left = `${e.clientX - offsetX}px`;
-//   pomodoroTimerBox.style.top = `${e.clientY - offsetY}px`;
-// }
+//team about
+document
+  .getElementById("rightnavabout")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    navDisplay("about", "contact");
+  });
+
+  //team contact
+document
+  .getElementById("rightnavcontact")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    navDisplay("contact", "about");
+});

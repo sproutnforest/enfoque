@@ -65,10 +65,12 @@ document.getElementById("check").addEventListener("change", function () {
   savemode(isDarkMode);
 });
 
+//saving dark mode light mode
 function savemode(isDarkMode) {
   localStorage.setItem("mode", isDarkMode ? "dark" : "light");
 }
 
+//loading saved mode
 document.addEventListener("DOMContentLoaded", () => {
   const savedmode = localStorage.getItem("mode");
   if (savedmode === "dark") {
