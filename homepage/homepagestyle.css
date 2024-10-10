@@ -130,6 +130,10 @@ body::-webkit-scrollbar {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .judul-feature {
   align-content: center;
