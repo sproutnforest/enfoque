@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 html{
-  background-image: url('background/room.jpg'); 
+  background-image: url('background/room.jpg');
   background-size: cover; 
   background-position: center;
   margin: 0;
@@ -17,9 +17,9 @@ html{
   /* overflow: visible; */
 }
 body {
-  background-image: url('background/room.jpg');
+  /* background-image: url('background/room.jpg');
   background-size: cover; 
-  background-position: center;
+  background-position: center; */
   margin: 0;
   padding: 0;
   overflow: visible;
