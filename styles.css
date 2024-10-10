@@ -632,15 +632,15 @@ body {
   display: none;
   top: 20px;
   left: 20px;
-  width: 300px;
+  width: 400px;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: right 0.3s ease;
   z-index: 1000;
-  margin-left: 200px;
-  margin-top: 170px;
+  margin-left: 130px;
+  margin-top: 100px
 }
 
 .background-chooser.active {
@@ -649,7 +649,7 @@ body {
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
@@ -675,6 +675,7 @@ body {
   object-fit: cover;
   z-index: -1;
 }
+
 .about{
   position: relative;
   top: 53%;
