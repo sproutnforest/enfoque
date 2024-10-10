@@ -97,13 +97,17 @@ nav {
 @media (max-width: 768px) {
   nav {
     width: 70px;
-    height: 340px;
+    height: 240px;
     margin-top: 100px;
   }
   .logo {
     text-align: center;
     display: flex;
     transition: all 1s ease;
+  }
+  .icon-1{
+    font-size:xx-small;
+    padding: 10px;
   }
 }
 
