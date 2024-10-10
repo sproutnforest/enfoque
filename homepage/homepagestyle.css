@@ -120,9 +120,6 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-.tutor1::-webkit-scrollbar {
-}
-
 .tutor-1 {
   width: 100%;
   max-width: 1100px;
