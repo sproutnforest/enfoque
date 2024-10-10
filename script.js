@@ -779,3 +779,20 @@ document
     event.preventDefault();
     navDisplay("contact", "about");
 });
+
+//Size too small alert
+const targetWidth = 512;
+const targetHeight = 335;
+
+function checkWindowSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width <= targetWidth && height <= targetHeight) {
+        alert(`Tolong perbesar window mu agar web bekerja dengan baik! Terima kasih!`);
+    }
+}
+
+window.addEventListener('resize', checkWindowSize);
+
+checkWindowSize();
