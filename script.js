@@ -90,6 +90,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#todobutton").style.backgroundColor = "#575757";
     document.querySelector(".pomodoro-timer").style.backgroundColor = "#2D2D2D";
     document.querySelector(".pomodoro-timer-box").style.color = "#7F7F7F";
+    document.querySelector('body').style.color="#7F7F7F";
   } else {
     isDarkMode = false;
     document.querySelector("nav").style.backgroundColor = "#fff";
@@ -149,6 +150,7 @@ document.getElementById("check").addEventListener("change", function () {
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
     document.querySelector(".pomodoro-timer").style.backgroundColor = "#fff";
     document.querySelector(".pomodoro-timer-box").style.color = "#333";
+    document.querySelector('body').style.color="black";
   }
   savemode(isDarkMode);
 });
@@ -250,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#todobutton").style.backgroundColor = "#575757";
     document.querySelector(".pomodoro-timer").style.backgroundColor = "#2D2D2D";
     document.querySelector(".pomodoro-timer-box").style.color = "#7F7F7F";
+    document.querySelector('body').style.color="#7F7F7F";
   } else {
     document.querySelector("nav").style.backgroundColor = "#fff";
     document.querySelector(".uphead").style.backgroundColor = "#fff";
@@ -308,6 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#todobutton").style.backgroundColor = "#dadad9";
     document.querySelector(".pomodoro-timer").style.backgroundColor = "#fff";
     document.querySelector(".pomodoro-timer-box").style.color = "#333";
+    document.querySelector('body').style.color="black";
   }
 });
 
@@ -373,7 +377,6 @@ function updateTaskCount() {
     progressBar.style.width = `${progressPercentage}%`;
   
     if (completedTasks === totalTasks && totalTasks > 0) {
-      alert("Hore! Semua tugas telah selesai!");
       shootConfetti(); 
     }
 }
@@ -404,6 +407,10 @@ document.getElementById("pending-tasks").addEventListener("click", function () {
         task.style.display = "block";
       }
     });
+    let sidebar = document.querySelectorAll("li.sideli");
+    sidebar.forEach(side => {
+      side.style.display = "block";
+    });
 });
   
 document.getElementById("completed-tasks").addEventListener("click", function () {
@@ -414,6 +421,10 @@ document.getElementById("completed-tasks").addEventListener("click", function ()
       } else {
         task.style.display = "none";
       }
+    });
+    let sidebar = document.querySelectorAll("li.sideli");
+    sidebar.forEach(side => {
+      side.style.display = "block";
     });
 });
 
